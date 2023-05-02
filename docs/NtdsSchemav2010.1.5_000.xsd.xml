@@ -1,0 +1,2752 @@
+<?xml version="1.0"?>
+<xs:schema id="NtdsRecords" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:didata="http://www.dicorp.com/didata">
+  <xs:complexType name="Races_List">
+    <xs:all>
+      <xs:element name="Race" type="RaceMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="Race" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_List[@name='Races']/MDL_Numeric[@name='Race']" didata:popup="RaceMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="6" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="ProtectiveDevices_List">
+    <xs:all>
+      <xs:element name="ProtectiveDevice" type="ProtectiveDeviceMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="ProtectiveDevice" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_List[@name='ProtectiveDevices']/MDL_Numeric[@name='ProtectiveDevice']" didata:popup="ProtectiveDeviceMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="11" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="AirbagDeployments_List">
+    <xs:all>
+      <xs:element name="AirbagDeployment" type="AirbagDeploymentMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="AirbagDeployment" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_List[@name='AirbagDeployments']/MDL_Numeric[@name='AirbagDeployment']" didata:popup="AirbagDeploymentMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="OtherTransportModes_List">
+    <xs:all>
+      <xs:element name="OtherTransportMode" type="OtherTransportModeMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="OtherTransportMode" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_List[@name='OtherTransportModes']/MDL_Numeric[@name='OtherTransportMode']" didata:popup="OtherTransportModeMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="6" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="GcsQualifiers_List">
+    <xs:all>
+      <xs:element name="GcsQualifier" type="GcsQualifierMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="GcsQualifier" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_List[@name='GcsQualifiers']/MDL_Numeric[@name='GcsQualifier']" didata:popup="GcsQualifierMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="3" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="DrugUseIndicators_List">
+    <xs:all>
+      <xs:element name="DrugUseIndicator" type="DrugUseIndicatorMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="DrugUseIndicator" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_List[@name='DrugUseIndicators']/MDL_Numeric[@name='DrugUseIndicator']" didata:popup="DrugUseIndicatorMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="HospitalProcedures_List">
+    <xs:all>
+      <xs:element name="HospitalProcedure" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Default" didata:table="NtdsRecords" didata:name="HospitalProcedure" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='HospitalProcedures']/MDL_Text[@name='HospitalProcedure']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="50" didata:validation_pattern="(\d{2}\.\d{1,2})">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="HospitalProcedure_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HospitalProcedureStartDate" type="biuHospitalProcedureStartDate_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="HospitalProcedureStartDate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='HospitalProcedures']/MDL_DateTime[@name='HospitalProcedureStartDate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1990" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="HospitalProcedureStartTime" type="biumdlTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Time" didata:table="NtdsRecords" didata:name="HospitalProcedureStartTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='HospitalProcedures']/MDL_Time[@name='HospitalProcedureStartTime']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="ComorbidConditions_List">
+    <xs:all>
+      <xs:element name="ComorbidCondition" type="ComorbidConditionMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="ComorbidCondition" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='ComorbidConditions']/MDL_Numeric[@name='ComorbidCondition']" didata:popup="ComorbidConditionMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="24" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="InjuryDiagnoses_List">
+    <xs:all>
+      <xs:element name="InjuryDiagnosis" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Default" didata:table="NtdsRecords" didata:name="InjuryDiagnosis" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='InjuryDiagnoses']/MDL_Text[@name='InjuryDiagnosis']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="6" didata:validation_pattern="((([vV]|[0-9])\d{2}(\.\d{1,2})?))">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="InjuryDiagnosis_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="AisCodes_List">
+    <xs:all>
+      <xs:element name="AisPredot" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Numeric" didata:table="NtdsRecords" didata:name="AisPredot" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='InjurySeverity']/MDL_List[@name='AisCodes']/MDL_Text[@name='AisPredot']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="6" didata:validation_pattern="[0-9]{6}">
+        <xs:simpleType>
+          <xs:restriction base="AisPredot_PatternRestriction">
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="AisSeverity" type="AisSeverityMenu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="AisSeverity" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='InjurySeverity']/MDL_List[@name='AisCodes']/MDL_Numeric[@name='AisSeverity']" didata:popup="AisSeverityMenu" didata:popup_type="nullabledecimal" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="9" didata:min="1" minOccurs="0" />
+      <xs:element name="IssRegion" type="IssRegionMenu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="IssRegion" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='InjurySeverity']/MDL_List[@name='AisCodes']/MDL_Numeric[@name='IssRegion']" didata:popup="IssRegionMenu" didata:popup_type="nullabledecimal" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="6" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="HospitalComplications_List">
+    <xs:all>
+      <xs:element name="HospitalComplication" type="HospitalComplicationMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="HospitalComplication" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='HospitalComplications']/MDL_Numeric[@name='HospitalComplication']" didata:popup="HospitalComplicationMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="26" didata:min="1" minOccurs="0" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="NtdsRecordItem">
+    <xs:all>
+      <xs:element name="LastModifiedDateTime" type="LastModifiedDateTime_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="DateTime" didata:table="NtdsRecords" didata:name="LastModifiedDateTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_DateTime[@name='LastModifiedDateTime']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="True" didata:required="True" didata:min_year="1980" didata:max_year="2099" minOccurs="1" />
+      <xs:element name="PatientId" minOccurs="1" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Default" didata:table="NtdsRecords" didata:name="PatientId" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_Text[@name='PatientId']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="True" didata:required="True" didata:size="50">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="FacilityId" minOccurs="1" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Default" didata:table="NtdsRecords" didata:name="FacilityId" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_Text[@name='FacilityId']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="True" didata:required="True" didata:size="50">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="HomeZip" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Default" didata:mask="zip-9" didata:table="NtdsRecords" didata:name="HomeZip" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Text[@name='HomeZip']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="10" didata:validation_pattern="[0-9]{5}(-[0-9]{4})?">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="HomeZip_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HomeCountry" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Alpha" didata:table="NtdsRecords" didata:name="HomeCountry" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Text[@name='HomeCountry']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="2" didata:validation_pattern="[A-Z]{2}">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="HomeCountry_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HomeState" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Numeric" didata:table="NtdsRecords" didata:name="HomeState" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Text[@name='HomeState']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="2" didata:validation_pattern="[0-9]{2}">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="HomeState_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HomeCounty" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Numeric" didata:table="NtdsRecords" didata:name="HomeCounty" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Text[@name='HomeCounty']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="3" didata:validation_pattern="[0-9]{3}">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="HomeCounty_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HomeCity" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Numeric" didata:table="NtdsRecords" didata:name="HomeCity" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Text[@name='HomeCity']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="5" didata:validation_pattern="[0-9]{5}">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="HomeCity_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HomeResidence" type="HomeResidenceMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="HomeResidence" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Numeric[@name='HomeResidence']" didata:popup="HomeResidenceMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" minOccurs="0" />
+      <xs:element name="DateOfBirth" type="biuDateOfBirth_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="DateOfBirth" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_DateTime[@name='DateOfBirth']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1890" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="Age" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="Age" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Numeric[@name='Age']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="120" didata:min="0" minOccurs="0" />
+      <xs:element name="AgeUnits" type="AgeUnitsMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="AgeUnits" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Numeric[@name='AgeUnits']" didata:popup="AgeUnitsMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" minOccurs="0" />
+      <xs:element name="Races" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="Races" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_List[@name='Races']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="2" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="2">
+            <xs:element name="item" type="Races_List" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="Race" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_List[@name='Races']/MDL_Numeric[@name='Race']" didata:popup="RaceMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="6" didata:min="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Ethnicity" type="EthnicityMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="Ethnicity" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Numeric[@name='Ethnicity']" didata:popup="EthnicityMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="2" didata:min="1" minOccurs="0" />
+      <xs:element name="Sex" type="SexMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="Sex" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Demographic']/MDL_Numeric[@name='Sex']" didata:popup="SexMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="2" didata:min="1" minOccurs="0" />
+      <xs:element name="IncidentDate" type="biuIncidentDate_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="IncidentDate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_DateTime[@name='IncidentDate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1990" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="IncidentTime" type="biumdlTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Time" didata:table="NtdsRecords" didata:name="IncidentTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Time[@name='IncidentTime']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" />
+      <xs:element name="WorkRelated" type="WorkRelatedMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="WorkRelated" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Numeric[@name='WorkRelated']" didata:popup="WorkRelatedMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="2" didata:min="1" minOccurs="0" />
+      <xs:element name="PatientsOccupationalIndustry" type="PatientsOccupationalIndustryMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="PatientsOccupationalIndustry" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Numeric[@name='PatientsOccupationalIndustry']" didata:popup="PatientsOccupationalIndustryMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="14" didata:min="1" minOccurs="0" />
+      <xs:element name="PatientsOccupation" type="PatientsOccupationMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="PatientsOccupation" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Numeric[@name='PatientsOccupation']" didata:popup="PatientsOccupationMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="23" didata:min="1" minOccurs="0" />
+      <xs:element name="PrimaryECode" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Default" didata:table="NtdsRecords" didata:name="PrimaryECode" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Text[@name='PrimaryECode']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="5" didata:validation_pattern="((\d{3}(\.\d{1})?))">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="PrimaryECode_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="LocationECode" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="LocationECode" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Numeric[@name='LocationECode']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="9" didata:min="0" minOccurs="0" />
+      <xs:element name="AdditionalECode" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Default" didata:table="NtdsRecords" didata:name="AdditionalECode" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Text[@name='AdditionalECode']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="5" didata:validation_pattern="((\d{3}(\.\d{1})?))">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="AdditionalECode_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IncidentCountry" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Alpha" didata:table="NtdsRecords" didata:name="IncidentCountry" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Text[@name='IncidentCountry']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="2" didata:validation_pattern="[A-Z]{2}">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="IncidentCountry_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IncidentState" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Numeric" didata:table="NtdsRecords" didata:name="IncidentState" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Text[@name='IncidentState']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="2" didata:validation_pattern="[0-9]{2}">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="IncidentState_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IncidentCounty" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Numeric" didata:table="NtdsRecords" didata:name="IncidentCounty" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Text[@name='IncidentCounty']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="3" didata:validation_pattern="[0-9]{3}">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="IncidentCounty_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IncidentCity" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Numeric" didata:table="NtdsRecords" didata:name="IncidentCity" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Text[@name='IncidentCity']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="5" didata:validation_pattern="[0-9]{5}">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="IncidentCity_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InjuryZip" minOccurs="0" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Text" didata:representation="Default" didata:mask="zip-9" didata:table="NtdsRecords" didata:name="InjuryZip" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Text[@name='InjuryZip']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="10" didata:validation_pattern="[0-9]{5}(-[0-9]{4})?">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="InjuryZip_PatternRestriction">
+              <xs:attribute ref="biu" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProtectiveDevices" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="ProtectiveDevices" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_List[@name='ProtectiveDevices']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="10" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="10">
+            <xs:element name="item" type="ProtectiveDevices_List" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="ProtectiveDevice" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_List[@name='ProtectiveDevices']/MDL_Numeric[@name='ProtectiveDevice']" didata:popup="ProtectiveDeviceMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="11" didata:min="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChildSpecificRestraint" type="ChildSpecificRestraintMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="ChildSpecificRestraint" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_Numeric[@name='ChildSpecificRestraint']" didata:popup="ChildSpecificRestraintMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="3" didata:min="1" minOccurs="0" />
+      <xs:element name="AirbagDeployments" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="AirbagDeployments" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_List[@name='AirbagDeployments']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="4" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="4">
+            <xs:element name="item" type="AirbagDeployments_List" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="AirbagDeployment" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Injury']/MDL_List[@name='AirbagDeployments']/MDL_Numeric[@name='AirbagDeployment']" didata:popup="AirbagDeploymentMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EmsNotifyDate" type="biuEmsNotifyDate_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="EmsNotifyDate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_DateTime[@name='EmsNotifyDate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1990" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="EmsNotifyTime" type="biumdlTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Time" didata:table="NtdsRecords" didata:name="EmsNotifyTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Time[@name='EmsNotifyTime']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" />
+      <xs:element name="EmsArrivalDate" type="biuEmsArrivalDate_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="EmsArrivalDate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_DateTime[@name='EmsArrivalDate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1990" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="EmsArrivalTime" type="biumdlTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Time" didata:table="NtdsRecords" didata:name="EmsArrivalTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Time[@name='EmsArrivalTime']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" />
+      <xs:element name="EmsLeftDate" type="biuEmsLeftDate_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="EmsLeftDate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_DateTime[@name='EmsLeftDate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1990" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="EmsLeftTime" type="biumdlTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Time" didata:table="NtdsRecords" didata:name="EmsLeftTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Time[@name='EmsLeftTime']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" />
+      <xs:element name="TransportMode" type="TransportModeMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="TransportMode" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='TransportMode']" didata:popup="TransportModeMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="6" didata:min="1" minOccurs="0" />
+      <xs:element name="OtherTransportModes" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="OtherTransportModes" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_List[@name='OtherTransportModes']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="5" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="5">
+            <xs:element name="item" type="OtherTransportModes_List" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="OtherTransportMode" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_List[@name='OtherTransportModes']/MDL_Numeric[@name='OtherTransportMode']" didata:popup="OtherTransportModeMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="6" didata:min="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EmsSbp" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EmsSbp" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='EmsSbp']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="300" didata:min="0" minOccurs="0" />
+      <xs:element name="EmsPulseRate" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EmsPulseRate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='EmsPulseRate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="299" didata:min="0" minOccurs="0" />
+      <xs:element name="EmsRespiratoryRate" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EmsRespiratoryRate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='EmsRespiratoryRate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="120" didata:min="0" minOccurs="0" />
+      <xs:element name="EmsPulseOximetry" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EmsPulseOximetry" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='EmsPulseOximetry']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="100" didata:min="0" minOccurs="0" />
+      <xs:element name="InterFacilityTransfer" type="InterFacilityTransferMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="InterFacilityTransfer" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='InterFacilityTransfer']" didata:popup="InterFacilityTransferMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="2" didata:min="1" minOccurs="0" />
+      <xs:element name="EmsGcsEye" type="GcsEyeMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EmsGcsEye" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='EmsGcsEye']" didata:popup="GcsEyeMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" minOccurs="0" />
+      <xs:element name="EmsGcsVerbal" type="GcsVerbalMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EmsGcsVerbal" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='EmsGcsVerbal']" didata:popup="GcsVerbalMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="5" didata:min="1" minOccurs="0" />
+      <xs:element name="EmsGcsMotor" type="GcsMotorMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EmsGcsMotor" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='EmsGcsMotor']" didata:popup="GcsMotorMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="6" didata:min="1" minOccurs="0" />
+      <xs:element name="EmsTotalGcs" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EmsTotalGcs" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='PreHospital']/MDL_Numeric[@name='EmsTotalGcs']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="15" didata:min="3" minOccurs="0" />
+      <xs:element name="HospitalArrivalDate" type="biuHospitalArrivalDate_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="HospitalArrivalDate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_DateTime[@name='HospitalArrivalDate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1990" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="HospitalArrivalTime" type="biumdlTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Time" didata:table="NtdsRecords" didata:name="HospitalArrivalTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Time[@name='HospitalArrivalTime']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" />
+      <xs:element name="Sbp" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="Sbp" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='Sbp']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="300" didata:min="0" minOccurs="0" />
+      <xs:element name="PulseRate" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="PulseRate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='PulseRate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="299" didata:min="0" minOccurs="0" />
+      <xs:element name="Temperature" type="biufloat" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Float" didata:representation="Default" didata:table="NtdsRecords" didata:name="Temperature" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Float[@name='Temperature']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="45.0" didata:min="0.0" minOccurs="0" />
+      <xs:element name="RespiratoryRate" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="RespiratoryRate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='RespiratoryRate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="120" didata:min="0" minOccurs="0" />
+      <xs:element name="RespiratoryAssistance" type="RespiratoryAssistanceMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="RespiratoryAssistance" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='RespiratoryAssistance']" didata:popup="RespiratoryAssistanceMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="2" didata:min="1" minOccurs="0" />
+      <xs:element name="PulseOximetry" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="PulseOximetry" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='PulseOximetry']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="100" didata:min="0" minOccurs="0" />
+      <xs:element name="SupplementalOxygen" type="SupplementalOxygenMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="SupplementalOxygen" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='SupplementalOxygen']" didata:popup="SupplementalOxygenMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="2" didata:min="1" minOccurs="0" />
+      <xs:element name="GcsQualifiers" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="GcsQualifiers" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_List[@name='GcsQualifiers']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="3" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="3">
+            <xs:element name="item" type="GcsQualifiers_List" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="GcsQualifier" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_List[@name='GcsQualifiers']/MDL_Numeric[@name='GcsQualifier']" didata:popup="GcsQualifierMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="3" didata:min="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AlcoholUseIndicators" type="AlcoholUseIndicatorsMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="AlcoholUseIndicators" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='AlcoholUseIndicators']" didata:popup="AlcoholUseIndicatorsMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" minOccurs="0" />
+      <xs:element name="DrugUseIndicators" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="DrugUseIndicators" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_List[@name='DrugUseIndicators']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="2" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="2">
+            <xs:element name="item" type="DrugUseIndicators_List" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="DrugUseIndicator" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_List[@name='DrugUseIndicators']/MDL_Numeric[@name='DrugUseIndicator']" didata:popup="DrugUseIndicatorMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EdDischargeDisposition" type="EdDischargeDispositionMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="EdDischargeDisposition" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='EdDischargeDisposition']" didata:popup="EdDischargeDispositionMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="11" didata:min="1" minOccurs="0" />
+      <xs:element name="DeathInEd" type="DeathInEdMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="DeathInEd" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='DeathInEd']" didata:popup="DeathInEdMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="3" didata:min="1" minOccurs="0" />
+      <xs:element name="EdDischargeDate" type="biuEdDischargeDate_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="EdDischargeDate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_DateTime[@name='EdDischargeDate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1990" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="EdDischargeTime" type="biumdlTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Time" didata:table="NtdsRecords" didata:name="EdDischargeTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Time[@name='EdDischargeTime']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" />
+      <xs:element name="GcsEye" type="GcsEyeMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="GcsEye" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='GcsEye']" didata:popup="GcsEyeMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="4" didata:min="1" minOccurs="0" />
+      <xs:element name="GcsVerbal" type="GcsVerbalMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="GcsVerbal" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='GcsVerbal']" didata:popup="GcsVerbalMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="5" didata:min="1" minOccurs="0" />
+      <xs:element name="GcsMotor" type="GcsMotorMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="GcsMotor" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='GcsMotor']" didata:popup="GcsMotorMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="6" didata:min="1" minOccurs="0" />
+      <xs:element name="TotalGcs" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="TotalGcs" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='ED']/MDL_Numeric[@name='TotalGcs']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="15" didata:min="3" minOccurs="0" />
+      <xs:element name="HospitalProcedures" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="HospitalProcedures" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='HospitalProcedures']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="200" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="200">
+            <xs:element name="item" type="HospitalProcedures_List" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ComorbidConditions" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="ComorbidConditions" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='ComorbidConditions']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="23" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="23">
+            <xs:element name="item" type="ComorbidConditions_List" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="ComorbidCondition" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='ComorbidConditions']/MDL_Numeric[@name='ComorbidCondition']" didata:popup="ComorbidConditionMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="24" didata:min="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InjuryDiagnoses" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="InjuryDiagnoses" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='InjuryDiagnoses']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="50" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="50">
+            <xs:element name="item" type="InjuryDiagnoses_List" didata:dataType="MDL_Text" didata:representation="Default" didata:table="NtdsRecords" didata:name="InjuryDiagnosis" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='InjuryDiagnoses']/MDL_Text[@name='InjuryDiagnosis']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="6" didata:validation_pattern="((([vV]|[0-9])\d{2}(\.\d{1,2})?))" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AisCodes" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="AisCodes" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='InjurySeverity']/MDL_List[@name='AisCodes']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="50" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="50">
+            <xs:element name="item" type="AisCodes_List" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AisVersion" type="nullabledecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="AisVersion" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='InjurySeverity']/MDL_Numeric[@name='AisVersion']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="15" didata:min="1" minOccurs="0" />
+      <xs:element name="IssLocal" type="nullabledecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="IssLocal" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='InjurySeverity']/MDL_Numeric[@name='IssLocal']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="75" didata:min="1" minOccurs="0" />
+      <xs:element name="TotalIcuLos" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="TotalIcuLos" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Outcome']/MDL_Numeric[@name='TotalIcuLos']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="400" didata:min="1" minOccurs="0" />
+      <xs:element name="TotalVentDays" type="biudecimal" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="TotalVentDays" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Outcome']/MDL_Numeric[@name='TotalVentDays']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="400" didata:min="1" minOccurs="0" />
+      <xs:element name="HospitalDischargeDate" type="biuHospitalDischargeDate_DateType" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_DateTime" didata:representation="Date" didata:table="NtdsRecords" didata:name="HospitalDischargeDate" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Outcome']/MDL_DateTime[@name='HospitalDischargeDate']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:min_year="1990" didata:max_year="2030" minOccurs="0" />
+      <xs:element name="HospitalDischargeTime" type="biumdlTime" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Time" didata:table="NtdsRecords" didata:name="HospitalDischargeTime" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Outcome']/MDL_Time[@name='HospitalDischargeTime']" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" />
+      <xs:element name="HospitalDischargeDisposition" type="HospitalDischargeDispositionMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="HospitalDischargeDisposition" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/NodeEditorContainer[@name='Outcome']/MDL_Numeric[@name='HospitalDischargeDisposition']" didata:popup="HospitalDischargeDispositionMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="9" didata:min="1" minOccurs="0" />
+      <xs:element name="PrimaryMethodPayment" type="PrimaryMethodPaymentMenu_biu" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="PrimaryMethodPayment" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_Numeric[@name='PrimaryMethodPayment']" didata:popup="PrimaryMethodPaymentMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="10" didata:min="1" minOccurs="0" />
+      <xs:element name="HospitalComplications" didata:dataType="MDL_List" didata:table="NtdsRecords" didata:name="HospitalComplications" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='HospitalComplications']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:size="25" didata:has_child_aggs="False" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="25">
+            <xs:element name="item" type="HospitalComplications_List" didata:dataType="MDL_Numeric" didata:representation="Default" didata:table="NtdsRecords" didata:name="HospitalComplication" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_CustomType[@name='NtdsRecordItem']/MDL_List[@name='HospitalComplications']/MDL_Numeric[@name='HospitalComplication']" didata:popup="HospitalComplicationMenu" didata:popup_type="biudecimal" didata:biu_enabled="True" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" didata:max="26" didata:min="1" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="NtdsRecords" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" didata:dataType="MDL_Table" didata:table="NtdsRecords" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NtdsRecord" type="NtdsRecordItem" xmlns:xs="http://www.w3.org/2001/XMLSchema" didata:dataType="MDL_Aggregate" didata:table="NtdsRecords" didata:name="NtdsRecord" didata:xpath="MDL_Document[@name='Ntds_MDL']/MDL_Table[@name='NtdsRecords']/MDL_Aggregate[@name='NtdsRecord']" didata:biu_enabled="False" didata:hidden="False" didata:hide_menu="False" didata:mandatory="False" didata:required="False" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="NtdsVersion" use="required" fixed="v2010.1.5"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="nullable">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nullabledecimal">
+    <xs:union memberTypes="xs:decimal nullable" />
+  </xs:simpleType>
+  <xs:simpleType name="nullablefloat">
+    <xs:union memberTypes="xs:float nullable" />
+  </xs:simpleType>
+  <xs:simpleType name="nullablebool">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([tT][rR][uU][eE])|([fF][aA][lL][sS][eE])|(1)|(0)|()" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="nullabledateTime">
+    <xs:union memberTypes="xs:dateTime nullable" />
+  </xs:simpleType>
+  <xs:simpleType name="nullabledate">
+    <xs:union memberTypes="xs:date nullable" />
+  </xs:simpleType>
+  <xs:simpleType name="nullabletime">
+    <xs:union memberTypes="xs:time nullable" />
+  </xs:simpleType>
+  <xs:attribute name="biu">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="1">
+          <xs:annotation>
+            <xs:documentation>Not Applicable</xs:documentation>
+          </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="2">
+          <xs:annotation>
+            <xs:documentation>Not Known / Not Recorded</xs:documentation>
+          </xs:annotation>
+        </xs:enumeration>
+        <!--<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation>Not Recorded</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>-->
+        <!--<xs:enumeration value="">
+                <xs:annotation>
+                    <xs:documentation>blank</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>-->
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:complexType name="biudecimal">
+    <xs:simpleContent>
+      <xs:extension base="nullabledecimal">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="biufloat">
+    <xs:simpleContent>
+      <xs:extension base="nullablefloat">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="biubool">
+    <xs:simpleContent>
+      <xs:extension base="nullablebool">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="biudateTime">
+    <xs:simpleContent>
+      <xs:extension base="nullabledateTime">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="biudate">
+    <xs:simpleContent>
+      <xs:extension base="nullabledate">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="biutime">
+    <xs:simpleContent>
+      <xs:extension base="nullabletime">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="biustring">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="stringMaxLen50">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stringMaxLen6">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stringMaxLen10">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stringMaxLen2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stringMaxLen3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="stringMaxLen5">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HospitalProcedureStartDate_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1990-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuHospitalProcedureStartDate_DateType">
+    <xs:simpleContent>
+      <xs:extension base="HospitalProcedureStartDate_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="LastModifiedDateTime_DateType">
+    <xs:union memberTypes="dateTimePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:dateTime">
+          <xs:minInclusive value="1980-01-01T00:00:00" />
+          <xs:maxInclusive value="2099-12-31T23:59:59" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:simpleType name="DateOfBirth_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1890-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuDateOfBirth_DateType">
+    <xs:simpleContent>
+      <xs:extension base="DateOfBirth_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="IncidentDate_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1990-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuIncidentDate_DateType">
+    <xs:simpleContent>
+      <xs:extension base="IncidentDate_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="EmsNotifyDate_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1990-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuEmsNotifyDate_DateType">
+    <xs:simpleContent>
+      <xs:extension base="EmsNotifyDate_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="EmsArrivalDate_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1990-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuEmsArrivalDate_DateType">
+    <xs:simpleContent>
+      <xs:extension base="EmsArrivalDate_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="EmsLeftDate_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1990-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuEmsLeftDate_DateType">
+    <xs:simpleContent>
+      <xs:extension base="EmsLeftDate_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HospitalArrivalDate_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1990-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuHospitalArrivalDate_DateType">
+    <xs:simpleContent>
+      <xs:extension base="HospitalArrivalDate_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="EdDischargeDate_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1990-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuEdDischargeDate_DateType">
+    <xs:simpleContent>
+      <xs:extension base="EdDischargeDate_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HospitalDischargeDate_DateType">
+    <xs:union memberTypes="datePattern">
+      <xs:simpleType>
+        <xs:restriction base="xs:date">
+          <xs:minInclusive value="1990-01-01" />
+          <xs:maxInclusive value="2030-12-31" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <xs:complexType name="biuHospitalDischargeDate_DateType">
+    <xs:simpleContent>
+      <xs:extension base="HospitalDischargeDate_DateType">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="dateTimePattern">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\d{14})|(\d{8})|()" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="datePattern">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\d{8})|()" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="timePattern">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\d{6})|(\d{4})|(\d{2}:\d{2})" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="mdlDateTime">
+    <xs:union memberTypes="dateTimePattern xs:dateTime" />
+  </xs:simpleType>
+  <xs:simpleType name="nullablemdlDateTime">
+    <xs:union memberTypes="mdlDateTime nullable" />
+  </xs:simpleType>
+  <xs:complexType name="biumdlDateTime">
+    <xs:simpleContent>
+      <xs:extension base="nullablemdlDateTime">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="mdlDate">
+    <xs:union memberTypes="datePattern xs:date" />
+  </xs:simpleType>
+  <xs:simpleType name="nullablemdlDate">
+    <xs:union memberTypes="mdlDate nullable" />
+  </xs:simpleType>
+  <xs:complexType name="biumdlDate">
+    <xs:simpleContent>
+      <xs:extension base="nullablemdlDate">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="mdlTime">
+    <xs:union memberTypes="timePattern xs:time" />
+  </xs:simpleType>
+  <xs:simpleType name="nullablemdlTime">
+    <xs:union memberTypes="mdlTime nullable" />
+  </xs:simpleType>
+  <xs:complexType name="biumdlTime">
+    <xs:simpleContent>
+      <xs:extension base="nullablemdlTime">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <!--  MDL Menu AgeUnitsMenu -->
+  <xs:complexType name="AgeUnitsMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="AgeUnitsMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AgeUnitsMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Hours</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Days</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Months</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Years</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu AirbagDeploymentMenu -->
+  <xs:complexType name="AirbagDeploymentMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="AirbagDeploymentMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AirbagDeploymentMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Airbag Not Deployed</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Airbag Deployed Front</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Airbag Deployed Side</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Airbag Deployed Other (knee, airbelt, curtain etc)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu AisSeverityMenu -->
+  <xs:complexType name="AisSeverityMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="AisSeverityMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AisSeverityMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Minor Injury</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Moderate Injury</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Serious Injury</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Severe Injury</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Critical Injury</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Maximum Injury, Virtually Unsurvivable</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Not Possible to Assign</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu AisVersionMenu -->
+  <xs:complexType name="AisVersionMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="AisVersionMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AisVersionMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>80 Full code (description and severity, XXXXXX.Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>85 Full code (description and severity, XXXXXX.Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>90 Full code (description and severity, XXXXXX.Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>95 Full code (description and severity, XXXXXX.Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>98 Full code (description and severity, XXXXXX.Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>05 Full code (description and severity, XXXXXX.Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>ICD Map</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Tri-Code</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>AIS80 only (Severity only, ..Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="10">
+            <xs:annotation>
+              <xs:documentation>AIS85 only (Severity only, ..Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="11">
+            <xs:annotation>
+              <xs:documentation>AIS90 only (Severity only, ..Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="12">
+            <xs:annotation>
+              <xs:documentation>AIS95 only (Severity only, ..Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="13">
+            <xs:annotation>
+              <xs:documentation>AIS98 only (Severity only, ..Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="14">
+            <xs:annotation>
+              <xs:documentation>AIS05 only (Severity only, ..Y)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="15">
+            <xs:annotation>
+              <xs:documentation>Other</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu AlcoholUseIndicatorsMenu -->
+  <xs:complexType name="AlcoholUseIndicatorsMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="AlcoholUseIndicatorsMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AlcoholUseIndicatorsMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>No (not tested)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>No (confirmed by test)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Yes (confirmed by test [trace levels])</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Yes (confirmed by test [beyond legal limit])</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu ChildSpecificRestraintMenu -->
+  <xs:complexType name="ChildSpecificRestraintMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="ChildSpecificRestraintMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="ChildSpecificRestraintMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Child Car Seat</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Infant Car Seat</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Child Booster Seat</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu ComorbidConditionMenu -->
+  <xs:complexType name="ComorbidConditionMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="ComorbidConditionMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="ComorbidConditionMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>No NTDS co-morbidities are present</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Alcoholism</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Ascites within 30 days</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Bleeding Disorder</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Chemotherapy for cancer within 30 days</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Congenital Anomalies</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>Congestive heart failure</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Current smoker</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Currently requiring or on dialysis</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="10">
+            <xs:annotation>
+              <xs:documentation>CVA/residual neurological deficit</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="11">
+            <xs:annotation>
+              <xs:documentation>Diabetes mellitus</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="12">
+            <xs:annotation>
+              <xs:documentation>Disseminated cancer</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="13">
+            <xs:annotation>
+              <xs:documentation>Do Not Resuscitate (DNR) status</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="14">
+            <xs:annotation>
+              <xs:documentation>Esophageal varices</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="15">
+            <xs:annotation>
+              <xs:documentation>Functionally dependent health status</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="16">
+            <xs:annotation>
+              <xs:documentation>History of angina within past 1 month</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="17">
+            <xs:annotation>
+              <xs:documentation>History of myocardial infarction within past 6 months</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="18">
+            <xs:annotation>
+              <xs:documentation>History of revascularization / amputation for PVD</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="19">
+            <xs:annotation>
+              <xs:documentation>Hypertension requiring medication</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="20">
+            <xs:annotation>
+              <xs:documentation>Impaired sensorium</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="21">
+            <xs:annotation>
+              <xs:documentation>Prematurity</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="22">
+            <xs:annotation>
+              <xs:documentation>Obesity</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="23">
+            <xs:annotation>
+              <xs:documentation>Respiratory Disease</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="24">
+            <xs:annotation>
+              <xs:documentation>Steroid use</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu DeathInEdMenu -->
+  <xs:complexType name="DeathInEdMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="DeathInEdMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="DeathInEdMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>DOA: Declared dead on arrival with minimal or no resuscitation attempt (no invasive procedures attempted)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Death after failed resuscitation attempt (failure to respond within 15 minutes)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Died in ED (other than failed resuscitation attempt)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu DrugUseIndicatorMenu -->
+  <xs:complexType name="DrugUseIndicatorMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="DrugUseIndicatorMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="DrugUseIndicatorMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>No (not tested)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>No (confirmed by test)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Yes (confirmed by test [prescription drug])</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Yes (confirmed by test [illegal use drug])</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu EdDischargeDispositionMenu -->
+  <xs:complexType name="EdDischargeDispositionMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="EdDischargeDispositionMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="EdDischargeDispositionMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Floor bed (general admission, non specialty unit bed)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Observation unit (unit that provides &lt; 24 hour stays)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Telemetry/step-down unit (less acuity than ICU)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Home with services</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Died</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Other (jail, institutional care facility, mental health, etc)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>Operating Room</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Intensive Care Unit (ICU)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Home without services</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="10">
+            <xs:annotation>
+              <xs:documentation>Left against medical advice</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="11">
+            <xs:annotation>
+              <xs:documentation>Transferred to another hospital</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu EthnicityMenu -->
+  <xs:complexType name="EthnicityMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="EthnicityMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="EthnicityMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Hispanic or Latino</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Not Hispanic or Latino</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu GcsEyeMenu -->
+  <xs:complexType name="GcsEyeMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="GcsEyeMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="GcsEyeMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>No eye movement when assessed</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Opens eyes in response to painful stimulation</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Opens eyes in response to verbal stimulation</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Opens eyes spontaneously</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu GcsVerbalMenu -->
+  <xs:complexType name="GcsVerbalMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="GcsVerbalMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="GcsVerbalMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>No verbal response</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Incomprehensible sounds / Inconsolable</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Inappropriate words / Inconsistently consolable</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Confused / Cries but is consolable</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Oriented / Smiles</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu GcsMotorMenu -->
+  <xs:complexType name="GcsMotorMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="GcsMotorMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="GcsMotorMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>No motor response</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Extension to pain</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Flexion to pain</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Withdrawal from pain</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Localizing pain</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Obeys commands / Appropriate response to stimulation</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu GcsQualifierMenu -->
+  <xs:complexType name="GcsQualifierMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="GcsQualifierMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="GcsQualifierMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Patient Chemically Sedated</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Obstruction to the Patient's Eye</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Patient Intubated</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu HomeResidenceMenu -->
+  <xs:complexType name="HomeResidenceMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="HomeResidenceMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HomeResidenceMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Homeless</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Undocumented Citizen</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Migrant</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Foreign Visitor</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu HospitalComplicationMenu -->
+  <xs:complexType name="HospitalComplicationMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="HospitalComplicationMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HospitalComplicationMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>No NTDS listed Medical Complications Occurred</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Abdominal compartment syndrome</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Abdominal fascia left open</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Acute renal failure</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Acute respiratory distress syndrome (ARDS)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Base deficit</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>Bleeding</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Cardiac arrest with CPR</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Coagulopathy</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="10">
+            <xs:annotation>
+              <xs:documentation>Coma</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="11">
+            <xs:annotation>
+              <xs:documentation>Decubitus ulcer</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="12">
+            <xs:annotation>
+              <xs:documentation>Deep surgical site infection</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="13">
+            <xs:annotation>
+              <xs:documentation>Drug or alcohol withdrawal syndrome</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="14">
+            <xs:annotation>
+              <xs:documentation>Deep Vein Thrombosis (DVT) / thrombophlebitis</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="15">
+            <xs:annotation>
+              <xs:documentation>Extremity compartment syndrome</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="16">
+            <xs:annotation>
+              <xs:documentation>Graft/prosthesis/flap failure</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="17">
+            <xs:annotation>
+              <xs:documentation>Intracranial pressure</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="18">
+            <xs:annotation>
+              <xs:documentation>Myocardial infarction</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="19">
+            <xs:annotation>
+              <xs:documentation>Organ/space surgical site infection</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="20">
+            <xs:annotation>
+              <xs:documentation>Pneumonia</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="21">
+            <xs:annotation>
+              <xs:documentation>Pulmonary embolism</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="22">
+            <xs:annotation>
+              <xs:documentation>Stroke / CVA</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="23">
+            <xs:annotation>
+              <xs:documentation>Superficial surgical site infection</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="24">
+            <xs:annotation>
+              <xs:documentation>Systemic sepsis</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="25">
+            <xs:annotation>
+              <xs:documentation>Unplanned intubation</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="26">
+            <xs:annotation>
+              <xs:documentation>Wound disruption</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu HospitalDischargeDispositionMenu -->
+  <xs:complexType name="HospitalDischargeDispositionMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="HospitalDischargeDispositionMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HospitalDischargeDispositionMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Discharged/Transferred to a short-term general hospital for inpatient care</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Discharged/Transferred to an Intermediate Care Facility (ICF)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Discharge/Transferred to home under care of organized home health service</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Left against medical advice or discontinued care</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Expired</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Discharged home with no home services</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>Discharged/Transferred to Skilled Nursing Facility</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Discharged/Transferred to hospice care</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Discharged/Transferred to another type of rehabilitation or long term care</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu InterFacilityTransferMenu -->
+  <xs:complexType name="InterFacilityTransferMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="InterFacilityTransferMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="InterFacilityTransferMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Yes</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>No</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu IssRegionMenu -->
+  <xs:complexType name="IssRegionMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="IssRegionMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="IssRegionMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Head or Neck</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Face</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Chest</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Abdominal or pelvic contents</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Extremities or pelvic girdle</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>External</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu OtherTransportModeMenu -->
+  <xs:complexType name="OtherTransportModeMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="OtherTransportModeMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="OtherTransportModeMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Ground Ambulance</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Helicopter Ambulance</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Fixed-wing Ambulance</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Private/Public Vehicle/Walk-in</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Police</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Other</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu PatientsOccupationMenu -->
+  <xs:complexType name="PatientsOccupationMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="PatientsOccupationMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="PatientsOccupationMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Business and Financial Operations Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Architecture and Engineering Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Community and Social Services Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Education, Training, and Library Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Healthcare Practitioners and Technical Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Protective Service Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>Building and Grounds Cleaning and Maintenance</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Sales and Related Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Farming, Fishing, and Forestry Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="10">
+            <xs:annotation>
+              <xs:documentation>Installation, Maintenance, and Repair Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="11">
+            <xs:annotation>
+              <xs:documentation>Transportation and Material Moving Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="12">
+            <xs:annotation>
+              <xs:documentation>Management Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="13">
+            <xs:annotation>
+              <xs:documentation>Computer and Mathematical Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="14">
+            <xs:annotation>
+              <xs:documentation>Life, Physical, and Social Science Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="15">
+            <xs:annotation>
+              <xs:documentation>Legal Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="16">
+            <xs:annotation>
+              <xs:documentation>Arts, Design, Entertainment, Sports, and Media</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="17">
+            <xs:annotation>
+              <xs:documentation>Healthcare Support Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="18">
+            <xs:annotation>
+              <xs:documentation>Food Preparation and Serving Related</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="19">
+            <xs:annotation>
+              <xs:documentation>Personal Care and Service Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="20">
+            <xs:annotation>
+              <xs:documentation>Office and Administrative Support Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="21">
+            <xs:annotation>
+              <xs:documentation>Construction and Extraction Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="22">
+            <xs:annotation>
+              <xs:documentation>Production Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="23">
+            <xs:annotation>
+              <xs:documentation>Military Specific Occupations</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu PatientsOccupationalIndustryMenu -->
+  <xs:complexType name="PatientsOccupationalIndustryMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="PatientsOccupationalIndustryMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="PatientsOccupationalIndustryMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Finance, Insurance, and Real Estate</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Manufacturing</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Retail Trade</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Transportation and Public Utilities</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Agriculture, Forestry, Fishing</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Professional and Business Services</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>Education and Health Services</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Construction</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Government</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="10">
+            <xs:annotation>
+              <xs:documentation>Natural Resources and Mining</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="11">
+            <xs:annotation>
+              <xs:documentation>Information Services</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="12">
+            <xs:annotation>
+              <xs:documentation>Wholesale Trade</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="13">
+            <xs:annotation>
+              <xs:documentation>Leisure and Hospitality</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="14">
+            <xs:annotation>
+              <xs:documentation>Other Services</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu PrimaryMethodPaymentMenu -->
+  <xs:complexType name="PrimaryMethodPaymentMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="PrimaryMethodPaymentMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="PrimaryMethodPaymentMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Medicaid</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Not Billed (for any reason)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Self Pay</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Private/Commercial Insurance</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>No Fault Automobile</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Medicare</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>Other Government</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Workers Compensation</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Blue Cross/Blue Shield</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="10">
+            <xs:annotation>
+              <xs:documentation>Other</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu ProtectiveDeviceMenu -->
+  <xs:complexType name="ProtectiveDeviceMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="ProtectiveDeviceMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="ProtectiveDeviceMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>None</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Lap Belt</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Personal Floatation Device</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Protective Non-Clothing Gear (e.g., shin guard)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Eye Protection</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Child Restraint (booster seat, child car seat)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="7">
+            <xs:annotation>
+              <xs:documentation>Helmet (e.g. bicycle, skiing, motorcycle)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="8">
+            <xs:annotation>
+              <xs:documentation>Airbag Present</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="9">
+            <xs:annotation>
+              <xs:documentation>Protective Clothing (e.g., padded leather pants)</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="10">
+            <xs:annotation>
+              <xs:documentation>Shoulder Belt</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="11">
+            <xs:annotation>
+              <xs:documentation>Other</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu RaceMenu -->
+  <xs:complexType name="RaceMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="RaceMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="RaceMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Asian</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Native Hawaiian or Other Pacific Islander</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Other Race</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>American Indian</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Black or African American</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>White</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu RespiratoryAssistanceMenu -->
+  <xs:complexType name="RespiratoryAssistanceMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="RespiratoryAssistanceMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="RespiratoryAssistanceMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Unassisted Respiratory Rate</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Assisted Respiratory Rate</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu SexMenu -->
+  <xs:complexType name="SexMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="SexMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="SexMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Male</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Female</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu SupplementalOxygenMenu -->
+  <xs:complexType name="SupplementalOxygenMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="SupplementalOxygenMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="SupplementalOxygenMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>No Supplemental Oxygen</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Supplemental Oxygen</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu TransportModeMenu -->
+  <xs:complexType name="TransportModeMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="TransportModeMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportModeMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Ground Ambulance</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Helicopter Ambulance</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="3">
+            <xs:annotation>
+              <xs:documentation>Fixed-wing Ambulance</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="4">
+            <xs:annotation>
+              <xs:documentation>Private/Public Vehicle/Walk-in</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="5">
+            <xs:annotation>
+              <xs:documentation>Police</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="6">
+            <xs:annotation>
+              <xs:documentation>Other</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu WorkRelatedMenu -->
+  <xs:complexType name="WorkRelatedMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="WorkRelatedMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="WorkRelatedMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Yes</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>No</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!--  MDL Menu BiuMenu -->
+  <xs:complexType name="BiuMenu_biu" didata:is_menu="true">
+    <xs:simpleContent>
+      <xs:extension base="BiuMenu">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="BiuMenu" didata:is_menu="true">
+    <xs:annotation>
+      <xs:documentation>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:enumeration value="1">
+            <xs:annotation>
+              <xs:documentation>Not Applicable</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="2">
+            <xs:annotation>
+              <xs:documentation>Not Known / Not Recorded</xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction HomeZip -->
+  <xs:complexType name="HomeZip_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="HomeZip_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HomeZip_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{5}(-[0-9]{4})?" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction HomeCountry -->
+  <xs:complexType name="HomeCountry_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="HomeCountry_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HomeCountry_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Z]{2}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction HomeState -->
+  <xs:complexType name="HomeState_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="HomeState_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HomeState_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{2}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction HomeCounty -->
+  <xs:complexType name="HomeCounty_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="HomeCounty_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HomeCounty_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{3}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction HomeCity -->
+  <xs:complexType name="HomeCity_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="HomeCity_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HomeCity_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{5}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction PrimaryECode -->
+  <xs:complexType name="PrimaryECode_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="PrimaryECode_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="PrimaryECode_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="((\d{3}(\.\d{1})?))" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction AdditionalECode -->
+  <xs:complexType name="AdditionalECode_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="AdditionalECode_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AdditionalECode_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="((\d{3}(\.\d{1})?))" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction IncidentCountry -->
+  <xs:complexType name="IncidentCountry_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="IncidentCountry_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="IncidentCountry_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[A-Z]{2}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction IncidentState -->
+  <xs:complexType name="IncidentState_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="IncidentState_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="IncidentState_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{2}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction IncidentCounty -->
+  <xs:complexType name="IncidentCounty_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="IncidentCounty_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="IncidentCounty_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{3}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction IncidentCity -->
+  <xs:complexType name="IncidentCity_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="IncidentCity_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="IncidentCity_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{5}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction InjuryZip -->
+  <xs:complexType name="InjuryZip_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="InjuryZip_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="InjuryZip_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{5}(-[0-9]{4})?" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction HospitalProcedure -->
+  <xs:complexType name="HospitalProcedure_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="HospitalProcedure_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="HospitalProcedure_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="(\d{2}\.\d{1,2})" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction InjuryDiagnosis -->
+  <xs:complexType name="InjuryDiagnosis_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="InjuryDiagnosis_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="InjuryDiagnosis_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="((([vV]|[0-9])\d{2}(\.\d{1,2})?))" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  <!-- MDL Pattern Restriction AisPredot -->
+  <xs:complexType name="AisPredot_PatternRestriction_biu" didata:is_pattern="true">
+    <xs:simpleContent>
+      <xs:extension base="AisPredot_PatternRestriction">
+        <xs:attribute ref="biu" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="AisPredot_PatternRestriction" didata:is_pattern="true">
+    <xs:union memberTypes="nullable">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[0-9]{6}" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+</xs:schema>

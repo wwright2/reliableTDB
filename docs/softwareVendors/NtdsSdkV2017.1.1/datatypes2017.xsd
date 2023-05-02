@@ -1,0 +1,2223 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!--Demographic Data Types defined below-->
+	<xs:simpleType name="HomeResidence">
+		<xs:annotation>
+			<xs:documentation>Documentation of the type of patient without a home zip code.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Homeless</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Undocumented Citizen</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Migrant Worker</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DateOfBirth">
+		<xs:annotation>
+			<xs:documentation>The patient's date of birth.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank datePattern">
+			<xs:simpleType>
+				<xs:restriction base="xs:date">
+					<xs:minInclusive value="1890-01-01"/>
+					<xs:maxInclusive value="2030-01-01"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Age">
+		<xs:annotation>
+			<xs:documentation>The patient's age at the time of injury (best approximation)</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:minInclusive value="0"/>
+					<xs:maxInclusive value="120"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="AgeUnits">
+		<xs:annotation>
+			<xs:documentation>The units used to document the patient's age (Years, Months, Days, Hours)</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Hours</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Days</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Months</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Years</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Minutes</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Race">
+		<xs:annotation>
+			<xs:documentation>The patient's race.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Asian</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Native Hawaiian or Other Pacific Islander</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Other Race</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>American Indian</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Black or African American</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>White</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Ethnicity">
+		<xs:annotation>
+			<xs:documentation>The patient's ethnicity.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Hispanic or Latino</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Not Hispanic or Latino</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Sex">
+		<xs:annotation>
+			<xs:documentation>The patient's sex.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Male</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Female</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** xs:simpleType Data Types INJURY ************************** -->
+	<xs:simpleType name="PatientsOccupationalIndustry">
+		<xs:annotation>
+			<xs:documentation>The occupational industry associated with the patient's work environment.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Finance, Insurance, and Real Estate</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Manufacturing</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Retail Trade</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Transportation and Public Utilities</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Agriculture, Forestry, Fishing</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Professional and Business Services</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Education and Health Services</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Construction</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Government</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Natural Resources and Mining</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>Information Services</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="12">
+						<xs:annotation>
+							<xs:documentation>Wholesale Trade</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="13">
+						<xs:annotation>
+							<xs:documentation>Leisure and Hospitality</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="14">
+						<xs:annotation>
+							<xs:documentation>Other Services</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="PatientsOccupation">
+		<xs:annotation>
+			<xs:documentation>The occupation of the patient.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Business and Financial Operations Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Architecture and Engineering Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Community and Social Services Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Education, Training, and Library Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Healthcare Practitioners and Technical Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Protective Service Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Building and Grounds Cleaning and Maintenance</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Sales and Related Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Farming, Fishing, and Forestry Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Installation, Maintenance, and Repair Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>Transportation and Material Moving Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="12">
+						<xs:annotation>
+							<xs:documentation>Management Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="13">
+						<xs:annotation>
+							<xs:documentation>Computer and Mathematical Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="14">
+						<xs:annotation>
+							<xs:documentation>Life, Physical, and Social Science Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="15">
+						<xs:annotation>
+							<xs:documentation>Legal Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="16">
+						<xs:annotation>
+							<xs:documentation>Arts, Design, Entertainment, Sports, and Media</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="17">
+						<xs:annotation>
+							<xs:documentation>Healthcare Support Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="18">
+						<xs:annotation>
+							<xs:documentation>Food Preparation and Serving Related</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="19">
+						<xs:annotation>
+							<xs:documentation>Personal Care and Service Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="20">
+						<xs:annotation>
+							<xs:documentation>Office and Administrative Support Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="21">
+						<xs:annotation>
+							<xs:documentation>Construction and Extraction Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="22">
+						<xs:annotation>
+							<xs:documentation>Production Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="23">
+						<xs:annotation>
+							<xs:documentation>Military Specific Occupations</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="ECodeIcd10">
+		<xs:annotation>
+			<xs:documentation>ICD-10 External cause code used to describe the mechanism (or external factor) that caused the injury event.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="3"/>
+					<xs:maxLength value="8"/>
+					<!--<xs:pattern value="(([TV-X]\d{2}|[Y][0-8]\d{1}|Y9[01456789])(\.[xA-HJ-NP-Z0-9]{1,4})?)"/> US Only-->
+					<!--<xs:pattern value="([V-Y](\[0-9]{2,4})?)"/> CA Only-->
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="PlaceOfInjuryCode">
+		<xs:annotation>
+			<xs:documentation>ICD-10 Place of occurrence external cause code used to describe the place/site/location of the injury event (Y92.x).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="4"/>
+					<xs:maxLength value="7"/>
+					<!--<xs:pattern value="[Y]92(\.[A-HJ-NP-Z0-9]{1,3})"/> US Only-->
+					<!--<xs:pattern value="[U]98[0-9])"/> CA Only-->
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="ProtectiveDevice">
+		<xs:annotation>
+			<xs:documentation>Protective devices (safety equipment) in use or worn by the patient at the time of the injury.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>None</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Lap Belt</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Personal Floatation Device</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Protective Non-Clothing Gear (e.g., shin guard)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Eye Protection</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Child Restraint (booster seat or child car seat)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Helmet (e.g. bicycle, skiing, motorcycle)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Airbag Present</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Protective Clothing (e.g., padded leather pants)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Shoulder Belt</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>Other</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="ChildSpecificRestraint">
+		<xs:annotation>
+			<xs:documentation>Protective child restraint devices used by patient at the time of injury.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Child Car Seat</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Infant Car Seat</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Child Booster Seat</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="AirbagDeployment">
+		<xs:annotation>
+			<xs:documentation>Indication of an airbag deployment during a motor vehicle crash.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Airbag Not Deployed</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Airbag Deployed Front</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Airbag Deployed Side</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Airbag Deployed Other (knee, airbelt, curtain etc)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** xs:simpleType Data Types PREHOSPITAL ************************** -->
+	<xs:simpleType name="TransportMode">
+		<xs:annotation>
+			<xs:documentation>The mode of transport delivering the patient to your hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Ground Ambulance</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Helicopter Ambulance</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Fixed-wing Ambulance</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Private/Public Vehicle/Walk-in</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Police</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Other</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="TraumaCenterCriterion">
+		<xs:annotation>
+			<xs:documentation>Physiologic and anatomic EMS trauma triage criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma. This information must be found on the scene of injury EMS run sheet.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Glasgow Coma Score &lt;= 13</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Systolic blood pressure &lt; 90 mmHg</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Respiratory rate &lt;10 or &gt; 29 breaths per minute (&lt;20 in infants aged &lt;1 year) or need for ventilatory support</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>All penetrating injuries to head, neck, torso, and extremities proximal to elbow or knee</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Chest wall instability or deformity (e.g., flail chest)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Two or more proximal long-bone fractures</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Crushed, degloved, mangled, or pulseless extremity</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Amputation proximal to wrist or ankle</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Pelvic fracture</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Open or depressed skull fracture</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>Paralysis</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="VehiclePedestrianOther">
+		<xs:annotation>
+			<xs:documentation>EMS trauma triage mechanism of injury criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma. This information must be found on the scene of injury EMS run sheet.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Fall adults: &gt; 20 ft. (one story is equal to 10 ft.)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Fall children: &gt; 10 ft. or 2-3 times the height of the child</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Crash intrusion, including roof: &gt; 12 in. occupant site; &gt; 18 in. any site</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Crash ejection (partial or complete) from automobile</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Crash death in same passenger compartment</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Crash vehicle telemetry data (AACN) consistent with high risk injury</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Auto v. pedestrian/bicyclist thrown, run over, or &gt; 20 MPH impact</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Motorcycle crash &gt; 20 mph</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>For adults &gt; 65; SBP &lt; 110</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Patients on anticoagulants and bleeding disorders</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>Pregnancy &gt; 20 weeks</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="12">
+						<xs:annotation>
+							<xs:documentation>EMS Provider judgment</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="13">
+						<xs:annotation>
+							<xs:documentation>Burns</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="14">
+						<xs:annotation>
+							<xs:documentation>Burns with Trauma</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** xs:simpleType Data Types EMERGENCY************************** -->
+	<xs:simpleType name="Sbp">
+		<xs:annotation>
+			<xs:documentation>First recorded systolic blood pressure in the ED/hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="300"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="PulseRate">
+		<xs:annotation>
+			<xs:documentation>First recorded pulse in the ED/hospital (palpated or auscultated), expressed as a number per minute.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="299"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Temperature">
+		<xs:annotation>
+			<xs:documentation>First recorded temperature (in degrees celsius/centrigrade) in the ED/hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal">
+					<xs:fractionDigits value="1"/>
+					<xs:maxInclusive value="45.0"/>
+					<xs:minInclusive value="0.0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RespiratoryRate">
+		<xs:annotation>
+			<xs:documentation>First recorded respiratory rate in the ED/hospital (expressed as a number per minute).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="120"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="RespiratoryAssistance">
+		<xs:annotation>
+			<xs:documentation>Determination of respiratory assistance associated with the initial ED/hospital respiratory rate.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Unassisted Respiratory Rate</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Assisted Respiratory Rate</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="PulseOximetry">
+		<xs:annotation>
+			<xs:documentation>First recorded oxygen saturation in the ED/hospital (expressed as a percentage).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="100"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="SupplementalOxygen">
+		<xs:annotation>
+			<xs:documentation>Determination of the presence of supplemental oxygen during assessment of initial ED/hospital oxygen saturation level.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>No Supplemental Oxygen</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Supplemental Oxygen</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="GcsEye">
+		<xs:annotation>
+			<xs:documentation>First recorded Glasgow Coma Score (Eye) in the ED/hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>No eye movement when assessed</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Opens eyes in response to painful stimulation</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Opens eyes in response to verbal stimulation</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Opens eyes spontaneously</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="GcsVerbal">
+		<xs:annotation>
+			<xs:documentation>First recorded Glasgow Coma Score (Verbal) in the ED/hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>(Adult) No verbal response. (Pediatric) No vocal response.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>(Adult) No verbal response. (Pediatric) Inconsolable, agitated.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>(Adult) Innapropriate words. (Pediatric) Inconsistently consolable, moaning.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>(Adult) Confused. (Pediatric) Cries but is consolable, inappropriate interactions.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>(Adult) Oriented. (Pediatric) Smiles, oriented to sounds, follows objects, interacts.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="GcsMotor">
+		<xs:annotation>
+			<xs:documentation>First recorded Glasgow Coma Score (Motor) in the ED/hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>No motor response.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Extension to pain.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Flexion to pain.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Withdrawal from pain.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Localizing pain.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>(Adult) Obeys commands. (Pediatric) Appropriate response to stimulation.</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="TotalGcs">
+		<xs:annotation>
+			<xs:documentation>First recorded Glasgow Coma Score (total) in the ED/hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="15"/>
+					<xs:minInclusive value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="GcsQualifier">
+		<xs:annotation>
+			<xs:documentation>Documentation of factors potentially affecting the first assessment of GCS upon arrival in the ED/hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Patient Chemically Sedated or Paralyzed</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Obstruction to the Patient's Eye</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Patient Intubated</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Valid GCS: patient was not sedated, not intubated, and did not have obstruction to the eye</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Height">
+		<xs:annotation>
+			<xs:documentation>First recorded height upon ED/hospital arrival</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal">
+					<xs:fractionDigits value="2"/>
+					<xs:maxInclusive value="244.00"/>
+					<xs:minInclusive value="0.00"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Weight">
+		<xs:annotation>
+			<xs:documentation>Measured or estimated baseline weight.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal">
+					<xs:fractionDigits value="2"/>
+					<xs:maxInclusive value="907.00"/>
+					<xs:minInclusive value="0.0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DrugScreen">
+		<xs:annotation>
+			<xs:documentation>First recorded positive drug screen results within 24 hours after first hospital encounter (select all that apply).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>AMP (Amphetamine)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>BAR (Barbiturate)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>BZO (Benzodiazepines)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>COC (Cocaine)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>mAMP (Methamphetamine)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>MDMA (Ecstasy)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>MTD (Methadone)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>OPI (Opioid)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>OXY (Oxycodone)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>PCP (Phencyclidine)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>TCA (Tricyclic Antidepressant)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="12">
+						<xs:annotation>
+							<xs:documentation>THC (Cannabinoid)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="13">
+						<xs:annotation>
+							<xs:documentation>Other</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="14">
+						<xs:annotation>
+							<xs:documentation>None</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="15">
+						<xs:annotation>
+							<xs:documentation>Not Tested</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="AlcoholScreenResult">
+		<xs:annotation>
+			<xs:documentation>First recorded blood alcohol concentration (BAC) results within 24 hours after first hospital encounter.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:decimal">
+					<xs:fractionDigits value="2"/>
+					<xs:maxInclusive value="0.99"/>
+					<xs:minInclusive value="0.00"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="EdDischargeDisposition">
+		<xs:annotation>
+			<xs:documentation>The disposition of the patient at the time of discharge from the ED.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Floor bed (general admission, non specialty unit bed)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Observation unit (unit that provides &lt; 24 hour stays)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Telemetry/step-down unit (less acuity than ICU)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Home with services</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Deceased/Expired</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Other (jail, institutional care facility, mental health, etc)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Operating Room</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Intensive Care Unit (ICU)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Home without services</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Left against medical advice</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>Transferred to another hospital</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DeathInEd">
+		<xs:annotation>
+			<xs:documentation>Indication of whether patient arrived at ED/Hospital with signs of life.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Arrived with NO signs of life</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Arrived with signs of life</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** xs:simpleType Data Types HOSPITAL PROCEDURES************************** -->
+	<xs:simpleType name="HospitalProcedureIcd10">
+		<xs:annotation>
+			<xs:documentation>Operative and essential procedures conducted during hospital stay.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="5"/>
+					<xs:maxLength value="10"/>
+					<!--<xs:pattern value="[A-H0-9][A-HJ-NP-Z0-9]{6}"/> US only-->
+					<!--<xs:pattern value="[1-8](\[A-Z0-9]{4,9})?"/> CA only-->
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** xs:simpleType Data Types DIAGNOSIS ************************** -->
+	<xs:simpleType name="ComorbidCondition">
+		<xs:annotation>
+			<xs:documentation>Pre-existing co-morbid factors.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Other</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Alcohol Use Disorder</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Bleeding Disorder</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Currently Receiving Chemotherapy For Cancer</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Congenital Anomalies</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Congestive Heart Failure</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Current Smoker</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Chronic Renal Failure</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Cerebrovascular Accident (CVA)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>Diabetes Mellitus</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="12">
+						<xs:annotation>
+							<xs:documentation>Disseminated Cancer</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="13">
+						<xs:annotation>
+							<xs:documentation>Advanced Directive Limiting Care</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="15">
+						<xs:annotation>
+							<xs:documentation>Functionally Dependent Health Status</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="19">
+						<xs:annotation>
+							<xs:documentation>Hypertension</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="21">
+						<xs:annotation>
+							<xs:documentation>Prematurity</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="23">
+						<xs:annotation>
+							<xs:documentation>Chronic Obstructive Pulmonary Disease (COPD)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="24">
+						<xs:annotation>
+							<xs:documentation>Steroid Use</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="25">
+						<xs:annotation>
+							<xs:documentation>Cirrhosis</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="26">
+						<xs:annotation>
+							<xs:documentation>Dementia</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="30">
+						<xs:annotation>
+							<xs:documentation>Attention Deficit Disorder/Attention Deficit Hyperactivity Disorder (ADD/ADHD)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="31">
+						<xs:annotation>
+							<xs:documentation>Anticoagulant Therapy</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="32">
+						<xs:annotation>
+							<xs:documentation>Angina Pectoris</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="33">
+						<xs:annotation>
+							<xs:documentation>Mental/Personality Disorder</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="34">
+						<xs:annotation>
+							<xs:documentation>Myocardial Infarction (MI)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="35">
+						<xs:annotation>
+							<xs:documentation>Peripheral Arterial Disease (PAD)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="36">
+						<xs:annotation>
+							<xs:documentation>Substance Abuse Disorder</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="DiagnosisIcd10">
+		<xs:annotation>
+			<xs:documentation>Diagnoses related to all identified injuries.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:minLength value="3"/>
+					<xs:maxLength value="8"/>
+					<!--<xs:pattern value="[A-TZ][0-9][0-9AB](\.[xA-HJ-NP-Z0-9]{1,4})?"/> US Only-->
+					<!--<xs:pattern value="[A-Z](\[0-9]{2,5})?"/> CA Only-->
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** xs:simpleType Data Types INJURY SEVERITY ************************** -->
+	<xs:simpleType name="AisPredot">
+		<xs:annotation>
+			<xs:documentation>The Abbreviated Injury Scale (AIS) pre-dot codes that reflect the patient’s injuries.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{6}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="AisSeverity">
+		<xs:annotation>
+			<xs:documentation>The Abbreviated Injury Scale (AIS) severity codes that reflect the patient’s injuries.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Minor Injury</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Moderate Injury</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Serious Injury</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Severe Injury</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Critical Injury</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Maximum Injury, Virtually Unsurvivable</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Not Possible to Assign</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	
+	<xs:simpleType name="AisVersion">
+		<xs:annotation>
+			<xs:documentation>The software (and version) used to calculate Abbreviated Injury Scale (AIS) severity codes.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>AIS 05, Update 08</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	
+	<!-- ************************** xs:simpleType Data Types OUTCOME ************************** -->
+	<xs:simpleType name="TotalIcuLos">
+		<xs:annotation>
+			<xs:documentation>The total number of patient days in any ICU (including all episodes).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="575"/>
+					<xs:minInclusive value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="TotalVentDays">
+		<xs:annotation>
+			<xs:documentation>The total number of patient days spent on a mechanical ventilator (including all episodes).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="575"/>
+					<xs:minInclusive value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="HospitalDischargeDisposition">
+		<xs:annotation>
+			<xs:documentation>The disposition of the patient when discharged from the hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to a short-term general hospital for inpatient care</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to an Intermediate Care Facility (ICF)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to home under care of organized home health service</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Left against medical advice or discontinued care</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Deceased/Expired</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Discharged to home or self-care (routine discharge)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to Skilled Nursing Facility (SNF)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to hospice care</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to court/law enforcement</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="11">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to inpatient rehab or designated unit</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="12">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to Long Term Care Hospital (LTCH)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="13">
+						<xs:annotation>
+							<xs:documentation>Discharged/transferred to a psychiatric hospital or psychiatric distinct part unit of a hospital</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="14">
+						<xs:annotation>
+							<xs:documentation>Discharged/Transferred to another type of institution not defined elsewhere</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** xs:simpleType Data Types FINANCIAL ************************** -->
+	<xs:simpleType name="PrimaryMethodPayment">
+		<xs:annotation>
+			<xs:documentation>Primary source of payment for hospital care.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Medicaid</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Not Billed (for any reason)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Self Pay</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Private/Commercial Insurance</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Medicare</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Other Government</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Other</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** xs:simpleType Data Types QUALITY ASSURANCE ************************** -->
+	<xs:simpleType name="HospitalComplication">
+		<xs:annotation>
+			<xs:documentation>Any medical complication that occurred during the patient’s stay at your hospital.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Other</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Acute Kidney Injury</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Acute Respiratory Distress Syndrome (ARDS)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Cardiac Arrest With CPR</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="12">
+						<xs:annotation>
+							<xs:documentation>Deep Surgical Site Infection</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="14">
+						<xs:annotation>
+							<xs:documentation>Deep Vein Thrombosis (DVT)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="15">
+						<xs:annotation>
+							<xs:documentation>Extremity Compartment Syndrome</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="18">
+						<xs:annotation>
+							<xs:documentation>Myocardial Infarction</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="19">
+						<xs:annotation>
+							<xs:documentation>Organ/Space Surgical Site Infection</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="21">
+						<xs:annotation>
+							<xs:documentation>Pulmonary Embolism</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="22">
+						<xs:annotation>
+							<xs:documentation>Stroke/CVA</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="25">
+						<xs:annotation>
+							<xs:documentation>Unplanned Intubation</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="29">
+						<xs:annotation>
+							<xs:documentation>Osteomyelitis</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="30">
+						<xs:annotation>
+							<xs:documentation>Unplanned Return to the OR</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="31">
+						<xs:annotation>
+							<xs:documentation>Unplanned Admission to the ICU</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="32">
+						<xs:annotation>
+							<xs:documentation>Severe Sepsis</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="33">
+						<xs:annotation>
+							<xs:documentation>Catheter-Associated Urinary Tract Infection (CAUTI)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="34">
+						<xs:annotation>
+							<xs:documentation>Central Line-Associated Bloodstream Infection (CLABSI)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="35">
+						<xs:annotation>
+							<xs:documentation>Ventilator-Associated Pneumonia (VAP)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="36">
+						<xs:annotation>
+							<xs:documentation>Alcohol Withdrawal Syndrome</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="37">
+						<xs:annotation>
+							<xs:documentation>Pressure Ulcer</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="38">
+						<xs:annotation>
+							<xs:documentation>Superficial Incisional Surgical Site Infection</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	
+	<!-- ************************** xs:simpleType Data Types PHYSICIAN NATIONAL PROVIDER IDENTIFICATION NUMBER ************************** -->
+	<xs:simpleType name="NationalProviderIdentifier">
+		<xs:annotation>
+			<xs:documentation>The National Provider Identifier (NPI) of the admitting surgeon.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{10}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+		
+	<!-- ************************** xs:simpleType Data Types PROCESS MEASURES ************************** -->
+	<xs:simpleType name="TbiPupillaryResponse">
+		<xs:annotation>
+			<xs:documentation>Physiological response of the pupil size within 30 minutes or less of ED/hospital arrival.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Both reactive</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>One reactive</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Neither reactive</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="TbiMidlineShift">
+		<xs:annotation>
+			<xs:documentation>&gt; 5mm shift of the brain past its center line within 24 hours after time of injury</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Yes</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>No</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Not Imaged (e.g. CT Scan, MRI)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="TbiCerebralMonitor">
+		<xs:annotation>
+			<xs:documentation>Indicate all cerebral monitors that were placed.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Intraventricular drain/catheter (e.g. ventriculostomy, external ventricular drain)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Intraparenchymal pressure monitor (e.g. Camino bolt, subarachnoid bolt, intraparenchymal catheter)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Intraparenchymal oxygen monitor (e.g. Licox)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Jugular venous bulb</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>None</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="VteProphylaxisType">
+		<xs:annotation>
+			<xs:documentation>Type of first dose of VTE prophylaxis administered to patient.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Heparin</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>None</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>LMWH (Dalteparin, Enoxaparin, etc.)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Direct Thrombin Inhibitor (Dabigatran, etc.)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Xa Inhibitor (Rivaroxaban, (etc.)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="9">
+						<xs:annotation>
+							<xs:documentation>Coumadin</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="10">
+						<xs:annotation>
+							<xs:documentation>Other</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Fluids4Hours">
+		<xs:annotation>
+			<xs:documentation>Volume of fluids within first 4 hours after ED/hospital arrival.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="40000"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Fluids24Hours">
+		<xs:annotation>
+			<xs:documentation>Volume of fluids within first 24 hours after ED/hospital arrival.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="60000"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="FluidsMeasure">
+		<xs:annotation>
+			<xs:documentation>The units used to document the patients fluids.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Units</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>CCs (MLs)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="FluidsConversion">
+		<xs:annotation>
+			<xs:documentation>The quantity of CCs (MLs) constituting a 'unit' of fluids administered.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:maxInclusive value="1000"/>
+					<xs:minInclusive value="0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Angiography">
+		<xs:annotation>
+			<xs:documentation>First interventional angiogram with or without embolization within first 48 hours of ED/Hospital Arrival.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>None</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Angiogram only</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Angiogram with embolization</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="EmbolizationSite">
+		<xs:annotation>
+			<xs:documentation>Organ / site of embolization for hemorrhage control.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Liver</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Spleen</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Kidneys</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Pelvic (iliac, gluteal, obturator)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Retroperitoneum (lumbar, sacral)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Peripheral vascular (neck, extremities)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Aorta (thoracic or abdominal)</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Other</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="HemorrhageControlSurgeryType">
+		<xs:annotation>
+			<xs:documentation>First type of surgery for hemorrhage control within the first 24 hours of ED/hospital arrival.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>None</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>Laparotomy</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="3">
+						<xs:annotation>
+							<xs:documentation>Thoracotomy</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="4">
+						<xs:annotation>
+							<xs:documentation>Sternotomy</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="5">
+						<xs:annotation>
+							<xs:documentation>Extremity</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="6">
+						<xs:annotation>
+							<xs:documentation>Neck</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="7">
+						<xs:annotation>
+							<xs:documentation>Mangled extremity/traumatic amputation</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="8">
+						<xs:annotation>
+							<xs:documentation>Other skin/soft tissue</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<!-- ************************** Common Domains ************************** -->
+	<xs:simpleType name="YesNo">
+		<xs:annotation>
+			<xs:documentation>Used in many binary choice elements.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:enumeration value="1">
+						<xs:annotation>
+							<xs:documentation>Yes</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="2">
+						<xs:annotation>
+							<xs:documentation>No</xs:documentation>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Date19902030">
+		<xs:annotation>
+			<xs:documentation>Standard date range from January 01, 1990 to January 01, 2030.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank datePattern">
+			<xs:simpleType>
+				<xs:restriction base="xs:date">
+					<xs:minInclusive value="1990-01-01"/>
+					<xs:maxInclusive value="2030-01-01"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Date20102030">
+		<xs:annotation>
+			<xs:documentation>Standard date range from January 01, 2010 to January 01, 2030.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank datePattern">
+			<xs:simpleType>
+				<xs:restriction base="xs:date">
+					<xs:minInclusive value="2010-01-01"/>
+					<xs:maxInclusive value="2030-01-01"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Time">
+		<xs:annotation>
+			<xs:documentation>Used for times</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank timePattern">
+			<xs:simpleType>
+				<xs:restriction base="xs:time"/>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Zip">
+		<xs:annotation>
+			<xs:documentation>Used for all types of postal codes.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[A-Z0-9 -]{1,10}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Country">
+		<xs:annotation>
+			<xs:documentation>Two letter Country code.</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[A-Z]{2}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="State">
+		<xs:annotation>
+			<xs:documentation>Two digit US State codes (FIPS).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{2}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="County">
+		<xs:annotation>
+			<xs:documentation>Three digit County codes (FIPS).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{3}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="City">
+		<xs:annotation>
+			<xs:documentation>Five digit City codes (FIPS).</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="Blank">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{5}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="Blank">
+		<xs:annotation>
+			<xs:documentation>Used for blanks/nulls</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="0"/>
+			<xs:minLength value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dateTimePattern">
+		<xs:restriction base="xs:string">
+<!--			<xs:pattern value="(\d{14})|(\d{8})|()"/>-->
+			<xs:pattern value="([1-2][0-9][0-9][0-9][0-1][0-9][0-3][0-9][0-2][0-9][0-5][0-9][0-5][0-9])|([1-2][0-9][0-9][0-9][0-1][0-9][0-3][0-9])|()"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="datePattern">
+		<xs:restriction base="xs:string">
+<!--			<xs:pattern value="(\d{8})|()"/>-->
+			<xs:pattern value="[1-2][0-9][0-9][0-9][0-1][0-9][0-3][0-9]|()"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="timePattern">
+		<xs:restriction base="xs:string">
+<!--			<xs:pattern value="(\d{6})|(\d{4})|(\d{2}:\d{2})"/>-->
+			<xs:pattern value="([0-2][0-9][0-5][0-9][0-5][0-9])|([0-2][0-9][0-5][0-9])|([0-2][0-9]:[0-5][0-9])"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- ************************** Common Null Values ************************** -->
+	<xs:attribute name="biu">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="1">
+					<xs:annotation>
+						<xs:documentation>Not Applicable</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="2">
+					<xs:annotation>
+						<xs:documentation>Not Known / Not Recorded</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+</xs:schema>

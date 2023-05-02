@@ -1,0 +1,9 @@
+Tag Name,List,Rule ID,Level,Description,Min,Max,Message
+EmsPulseRate,,3703,3,Initial Field Pulse Rate,0,299,"Pulse rate exceeds the max of 299"
+EmsSbp,,3603,3,Initial Field Systolic Blood Pressure,0,300,"SBP exceeds the max of 300"
+Sbp,,4704,3,Initial ED/Hospital Systolic Blood Pressure,0,300,"SBP value exceeds the max of 300"
+Temperature,,4903,3,Initial ED/Hospital Temperature,0,45,"Temperature exceeds the max of 45.0 Celsius"
+PulseRate,,4804,3,Initial ED/Hospital Pulse Rate,0,299,"Pulse rate exceeds the max of 299"
+Height,,8503,3,Height,0,244,"Height exceeds the max of 244 (cm)"
+Weight,,8603,3,Weight,0,907,"Weight exceeds the max of 907 (kg)"
+LowestSbp,,10903,3,Lowest ED/Hospital Systolic Blood Pressure,0, 300,"Warning: SBP value exceeds the max of 300"

@@ -1,0 +1,23 @@
+Tag Name,List,Rule ID,Level,Description,Value,Tag Name,List,Description,Value,Message (Display IF <col 1> is <col 6> AND <col 7> is <col 10>)
+HospitalDischargeDisposition,,7902,2,Hospital Discharge Disposition,<Blank>,EdDischargeDisposition,,Ed Discharge Disposition,"<> 1,2,3,7,8","Field cannot be blank"
+HospitalDischargeDisposition,,7903,2,Hospital Discharge Disposition,<Not Biu =1>,EdDischargeDisposition,,Ed Discharge Disposition,5,Field must be Not Applicable when ED Discharge Disposition = 5 (Died)
+HospitalDischargeDisposition,,7907,2,Hospital Discharge Disposition,<Not Biu =1>,EdDischargeDisposition,,Ed Discharge Disposition,"4,6,9,10,11","Field must be Not Applicable when ED Discharge Disposition = 4,6,9,10, or 11"
+HospitalDischargeDisposition,,7908,2,Hospital Discharge Disposition,<Not Applicable>,EdDischargeDisposition,,Ed Discharge Disposition,"<> 4,5,6,9,10,11","Field cannot be Not Applicable"
+HospitalDischargeDate,,7712,2,Hospital Discharge Date,<Not Biu =1>,EdDischargeDisposition,,Ed Discharge Disposition,"4,6,9,10,11","Field must be Not Applicable when ED Discharge Disposition = 4,6,9,10, or 11"
+HospitalDischargeTime,,7809,2,Hospital Discharge Time,<Not Biu =1>,EdDischargeDisposition,,Ed Discharge Disposition,"4,6,9,10,11","Field must be Not Applicable when ED Discharge Disposition = 4,6,9,10, or 11"
+HospitalDischargeDate,,7713,2,Hospital Discharge Date,<Not Biu =1>,EdDischargeDisposition,,Ed Discharge Disposition,5,Field must be Not Applicable when ED Discharge Disposition = 5 (Died)
+HospitalDischargeTime,,7810,2,Hospital Discharge Time,<Not Biu =1>,EdDischargeDisposition,,Ed Discharge Disposition,5,Field must be Not Applicable when ED Discharge Disposition = 5 (Died)
+HospitalComplications[].HospitalComplication,HospitalComplications,8103,3,Hospital Complication,35,TotalVentDays,,Total Ventilator Days,<Not Applicable>,"Hospital Complications include Ventilator Associated Pneumonia although Total Ventilator Days is Not Applicable. Please verify."
+AbuseInvestigation,,9303,3,Abuse Investigation,<Not Applicable>,AbuseReport,,Report of Physical Abuse,1,"Field should not be Not Applicable when Report of Physical Abuse = 1 (Yes)"
+WorkRelated,,1405,4,Work-Related,<> 1,PatientsOccupation,,Patient's Occupation,<Not Blank>,"Work-Related should be 1 (Yes) when Patient's Occupation is not 'Not Applicable' or 'Not Known/Not Recorded'"
+WorkRelated,,1406,4,Work-Related,<> 1,PatientsOccupationalIndustry,,Patient's Occupational Industry,<Not Blank>,"Work-Related should be 1 (Yes) when Patient's Occupational Industry is not 'Not Applicable' or 'Not Known/Not Recorded'"
+ChildSpecificRestraint,,2604,2,Child Specific Restraint,<Not Applicable>,ProtectiveDevices[].ProtectiveDevice,ProtectiveDevices,Protective Device,6,"Field cannot be Not Applicable when Protective Device is 6 (Child Restraint)"
+AlcoholScreenResult,,5933,2,Alcohol Screen Result,<Not Applicable>,AlcoholScreen,,Alcohol Screen,1,"Field cannot be Not Applicable when Alcohol Screen is 1 (Yes)"
+Age,,707,2,Age,<Not Biu =1>,AgeUnits,,Age Units,<Not Applicable>,Field must be Not Applicable when Age Units is Not Applicable
+Age,,708,2,Age,<Not Biu =2>,AgeUnits,,Age Units,<Not Known>,Field must be Not Known/Not Recorded when Age Units is Not Known/Not Recorded
+AgeUnits,,805,2,Age Units,<Not Biu =1>,Age,,Age,<Not Applicable>,Field must be Not Applicable when Age is Not Applicable
+AgeUnits,,806,2,Age Units,<Not Biu =2>,Age,,Age,<Not Known>,Field must be Not Known/Not Recorded when Age is Not Known/Not Recorded
+EdDischargeDisposition,,6106,2,Ed Discharge Disposition,<Not Applicable>,HospitalDischargeDate,,Hospital Discharge Date,<Not Applicable>,Field cannot not be Not Applicable when Hospital Discharge Date is Not Applicable
+EdDischargeDisposition,,6107,2,Ed Discharge Disposition,<Not Applicable>,HospitalDischargeDate,,Hospital Discharge Date,<Not Known>,Field cannot not be Not Applicable when Hospital Discharge Date is Not Known/Not Recorded
+EdDischargeDisposition,,6108,2,Ed Discharge Disposition,<Not Applicable>,HospitalDischargeDisposition,,Hospital Discharge Disposition,<Not Applicable>,Field cannot not be Not Applicable when Hospital Discharge Disposition is Not Applicable
+EdDischargeDisposition,,6109,2,Ed Discharge Disposition,<Not Applicable>,HospitalDischargeDisposition,,Hospital Discharge Disposition,<Not Known>,Field cannot not be Not Applicable when Hospital Discharge Disposition is Not Known/Not Recorded

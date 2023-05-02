@@ -1,0 +1,15 @@
+Tag Name,List,Rule ID,Level,Description,Min,Max,Message
+DateOfBirth,,602,1,Date of Birth,1890,2030,Date out of range
+IncidentDate,,1202,1,Injury Incident Date,1990,2030,Date out of range
+EmsNotifyDate,,2802,1,EMS Dispatch Date,1990,2030,Date out of range
+EmsArrivalDate,,3002,1,EMS Unit Arrival on Scene Date,1990,2030,Date out of range
+EmsLeftDate,,3202,1,EMS Unit Scene Departure Date,1990,2030,Date out of range
+HospitalArrivalDate,,4502,1,ED/Hospital Arrival Date,1990,2030,Date out of range
+EdDischargeDate,,6302,1,ED Discharge Date,1990,2030,Date out of range
+HospitalProcedures[].HospitalProcedureStartDate,HospitalProcedures,6602,1,Hospital Procedure Start Date,1990,2030,Date out of range
+HospitalDischargeDate,,7702,1,Hospital Discharge Date,1990,2030,Date out of range
+TbiCerebralMonitorDate,,10403,1,Cerebral Monitor Date,2010,2030,Date out of range
+VteProphylaxisDate,,10702,1,Venous Thromboembolism Prophylaxis Date,2010,2030,Date out of range
+AngiographyDate,,11902,1,Angiography Date,2010,2030,Date out of range
+HemorrhageControlSurgeryDate,,12202,1,Surgery For Hemorrhage Control Date,2010,2030,Date out of range
+WithdrawalOfLifeSupportingTreatmentDate,,13902,1,Withdrawal Of Life Supporting Treatment Date,2010,2030,Date out of range

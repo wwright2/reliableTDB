@@ -1,0 +1,28 @@
+Tag Name,List,Rule ID,Level,Description,Tag Name,Description,Message (Display IF <col 1> is less than <col 6>)
+IncidentDate,,1204,4,Injury Incident Date,DateOfBirth,Date of Birth,Injury Incident Date is earlier than Date of Birth
+EmsNotifyDate,,2803,3,EMS Dispatch Date,DateOfBirth,Date of Birth,EMS Dispatch Date is earlier than Date of Birth
+EmsArrivalDate,,3003,3,EMS Unit Arrival on Scene Date,DateOfBirth,Date of Birth,EMS Unit Arrival on Scene Date is earlier than Date of Birth
+EmsArrivalDate,,3004,4,EMS Unit Arrival on Scene Date,EmsNotifyDate,EMS Dispatch Date,EMS Unit Arrival on Scene Date is earlier than EMS Dispatch Date
+EmsLeftDate,,3203,3,EMS Unit Scene Departure Date,DateOfBirth,Date of Birth,EMS Unit Scene Departure Date is earlier than Date of Birth
+EmsLeftDate,,3204,4,EMS Unit Scene Departure Date,EmsNotifyDate,EMS Dispatch Date,EMS Unit Scene Departure Date is earlier than EMS Dispatch Date
+EmsLeftDate,,3205,4,EMS Unit Scene Departure Date,EmsArrivalDate,EMS Unit Arrival on Scene Date,EMS Unit Scene Departure Date is earlier than EMS Unit Arrival on Scene Date
+HospitalArrivalDate,,4506,3,ED/Hospital Arrival Date,EmsNotifyDate,EMS Dispatch Date,ED/Hospital Arrival Date is earlier than EMS Dispatch Date
+HospitalArrivalDate,,4507,3,ED/Hospital Arrival Date,EmsArrivalDate,EMS Unit Arrival on Scene Date,ED/Hospital Arrival Date is earlier than EMS Unit Arrival on Scene Date
+HospitalArrivalDate,,4508,3,ED/Hospital Arrival Date,EmsLeftDate,EMS Unit Scene Departure Date,ED/Hospital Arrival Date is earlier than EMS Unit Scene Departure Date
+HospitalArrivalDate,,4511,3,ED/Hospital Arrival Date,DateOfBirth,Date of Birth,ED/Hospital Arrival Date is earlier than Date of Birth
+EdDischargeDate,,6304,4,ED Discharge Date,EmsNotifyDate,EMS Dispatch Date,ED Discharge Date is earlier than EMS Dispatch Date
+EdDischargeDate,,6305,4,ED Discharge Date,EmsArrivalDate,EMS Unit Arrival on Scene Date,ED Discharge Date is earlier than EMS Unit Arrival on Scene Date
+EdDischargeDate,,6306,4,ED Discharge Date,EmsLeftDate,EMS Unit Scene Departure Date,ED Discharge Date is earlier than EMS Unit Scene Departure Date
+EdDischargeDate,,6307,2,ED Discharge Date,HospitalArrivalDate,ED/Hospital Arrival Date,ED Discharge Date is earlier than ED/Hospital Arrival Date
+EdDischargeDate,,6309,3,ED Discharge Date,DateOfBirth,Date of Birth,ED Discharge Date is earlier than Date of Birth
+HospitalProcedures[].HospitalProcedureStartDate,HospitalProcedures,6603,4,Hospital Procedure Start Date,EmsNotifyDate,EMS Dispatch Date,Hospital Procedure Start Date is earlier than EMS Dispatch Date
+HospitalProcedures[].HospitalProcedureStartDate,HospitalProcedures,6604,4,Hospital Procedure Start Date,EmsArrivalDate,EMS Unit Arrival on Scene Date,Hospital Procedure Start Date is earlier than EMS Unit Arrival on Scene Date
+HospitalProcedures[].HospitalProcedureStartDate,HospitalProcedures,6605,4,Hospital Procedure Start Date,EmsLeftDate,EMS Unit Scene Departure Date,Hospital Procedure Start Date is earlier than EMS Unit Scene Departure Date
+HospitalProcedures[].HospitalProcedureStartDate,HospitalProcedures,6606,4,Hospital Procedure Start Date,HospitalArrivalDate,ED/Hospital Arrival Date,Hospital Procedure Start Date is earlier than ED/Hospital Arrival Date
+HospitalProcedures[].HospitalProcedureStartDate,HospitalProcedures,6608,4,Hospital Procedure Start Date,DateOfBirth,Date of Birth,Hospital Procedure Start Date is earlier than Date of Birth
+HospitalDischargeDate,,7704,3,Hospital Discharge Date,EmsNotifyDate,EMS Dispatch Date,Hospital Discharge Date is earlier than EMS Dispatch Date
+HospitalDischargeDate,,7705,3,Hospital Discharge Date,EmsArrivalDate,EMS Unit Arrival on Scene Date,Hospital Discharge Date is earlier than EMS Unit Arrival on Scene Date
+HospitalDischargeDate,,7706,3,Hospital Discharge Date,EmsLeftDate,EMS Unit Scene Departure Date,Hospital Discharge Date is earlier than EMS Unit Scene Departure Date
+HospitalDischargeDate,,7707,2,Hospital Discharge Date,HospitalArrivalDate,ED/Hospital Arrival Date,Hospital Discharge Date is earlier than ED/Hospital Arrival Date
+HospitalDischargeDate,,7708,2,Hospital Discharge Date,EdDischargeDate,ED Discharge Date,Hospital Discharge Date is earlier than ED Discharge Date
+HospitalDischargeDate,,7709,3,Hospital Discharge Date,DateOfBirth,Date of Birth,Hospital Discharge Date is earlier than Date of Birth

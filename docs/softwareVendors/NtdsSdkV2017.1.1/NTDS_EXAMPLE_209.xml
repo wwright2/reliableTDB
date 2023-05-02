@@ -1,0 +1,194 @@
+<NtdsRecords NtdsVersion="Tqip_v2017" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Docs\DD%20docs\TqipSchemav2017.xsd">
+<NtdsRecord>
+<LastModifiedDateTime>2017-01-07T11:38:00</LastModifiedDateTime>
+<PatientId>14</PatientId>
+<FacilityId>24010</FacilityId>
+<HomeZip>21014</HomeZip>
+<HomeCountry>US</HomeCountry>
+<HomeState>24</HomeState>
+<HomeCounty>001</HomeCounty>
+<HomeCity>12345</HomeCity>
+<HomeResidence>1</HomeResidence>
+<DateOfBirth>19750101</DateOfBirth>
+<Age>41</Age>
+<AgeUnits>4</AgeUnits>
+<Races>
+<item><Race>6</Race></item>
+</Races>
+<Ethnicity>2</Ethnicity>
+<Sex>1</Sex>
+<IncidentDate>20160101</IncidentDate>
+<IncidentTime>010000</IncidentTime>
+<WorkRelated>1</WorkRelated>
+<!--<WorkRelated biu='2'></WorkRelated>-->
+<PatientsOccupationalIndustry>2</PatientsOccupationalIndustry>
+<PatientsOccupation>3</PatientsOccupation>
+<PrimaryECodeIcd10>V00.01xA</PrimaryECodeIcd10>
+<PlaceOfInjuryCode>Y92.00</PlaceOfInjuryCode>
+<AdditionalECodeIcd10>Y00.01xA</AdditionalECodeIcd10>
+<InjuryZip>21050</InjuryZip>
+<IncidentState>24</IncidentState>
+<IncidentCountry>US</IncidentCountry>
+<IncidentCounty>001</IncidentCounty>
+<IncidentCity>12345</IncidentCity>
+<ProtectiveDevices>
+<item><ProtectiveDevice>2</ProtectiveDevice></item>
+<item><ProtectiveDevice>3</ProtectiveDevice></item>
+<item><ProtectiveDevice>6</ProtectiveDevice></item>
+<item><ProtectiveDevice>8</ProtectiveDevice></item>
+</ProtectiveDevices>
+<ChildSpecificRestraint>1</ChildSpecificRestraint>
+<AirbagDeployments>
+<item><AirbagDeployment>2</AirbagDeployment></item>
+</AirbagDeployments>
+<EmsNotifyDate>20160101</EmsNotifyDate>
+<EmsNotifyTime>011000</EmsNotifyTime>
+<EmsArrivalDate>20160101</EmsArrivalDate>
+<EmsArrivalTime>013000</EmsArrivalTime>
+<EmsLeftDate>20160101</EmsLeftDate>
+<EmsLeftTime>020000</EmsLeftTime>
+<TransportMode>5</TransportMode>
+<OtherTransportModes>
+<item><OtherTransportMode>5</OtherTransportMode></item>
+<item><OtherTransportMode>2</OtherTransportMode></item>
+<item><OtherTransportMode>1</OtherTransportMode></item>
+<item><OtherTransportMode>2</OtherTransportMode></item>
+</OtherTransportModes>
+<EmsSbp>132</EmsSbp>
+<EmsPulseRate>123</EmsPulseRate>
+<EmsRespiratoryRate>41</EmsRespiratoryRate>
+<EmsPulseOximetry>50</EmsPulseOximetry>
+<EmsGcsEye>1</EmsGcsEye>
+<EmsGcsVerbal>2</EmsGcsVerbal>
+<EmsGcsMotor>3</EmsGcsMotor>
+<EmsTotalGcs>6</EmsTotalGcs>
+<InterFacilityTransfer>2</InterFacilityTransfer>
+<HospitalArrivalDate>20160101</HospitalArrivalDate>
+<HospitalArrivalTime>050000</HospitalArrivalTime>
+<Sbp>110</Sbp>
+<PulseRate>98</PulseRate>
+<Temperature>37</Temperature>
+<RespiratoryRate>40</RespiratoryRate>
+<RespiratoryAssistance>2</RespiratoryAssistance>
+<PulseOximetry>20</PulseOximetry>
+<SupplementalOxygen>1</SupplementalOxygen>
+<GcsEye>3</GcsEye>
+<GcsVerbal>3</GcsVerbal>
+<GcsMotor>3</GcsMotor>
+<TotalGcs>9</TotalGcs>
+<GcsQualifiers>
+<item><GcsQualifier>1</GcsQualifier></item>
+</GcsQualifiers>
+<EdDischargeDisposition>4</EdDischargeDisposition>
+<DeathInEd>2</DeathInEd>
+<EdDischargeDate>20160101</EdDischargeDate>
+<EdDischargeTime>100000</EdDischargeTime>
+<HospitalProcedures>
+	<item>
+	<HospitalProcedureIcd10>HZ30ZZZ</HospitalProcedureIcd10>
+	<HospitalProcedureStartDate>20160101</HospitalProcedureStartDate>
+	<HospitalProcedureStartTime>180100</HospitalProcedureStartTime>
+	</item>
+	<item>
+	<HospitalProcedureIcd10 biu='2'></HospitalProcedureIcd10>
+	<HospitalProcedureStartDate>20160101</HospitalProcedureStartDate>
+	<HospitalProcedureStartTime>180500</HospitalProcedureStartTime>
+	</item>
+</HospitalProcedures>
+<ComorbidConditions>
+	<item><ComorbidCondition>31</ComorbidCondition></item>
+	<item><ComorbidCondition>36</ComorbidCondition></item>
+</ComorbidConditions>
+<DiagnosesIcd10>
+	<item><DiagnosisIcd10>S00.10xA</DiagnosisIcd10></item>
+	<item><DiagnosisIcd10>T85.09xS</DiagnosisIcd10></item>
+</DiagnosesIcd10>
+<AisCodes>
+	<item>
+	<AisPredot>100099</AisPredot>
+	<AisSeverity>2</AisSeverity>
+	</item>
+</AisCodes>
+<AisVersion>6</AisVersion>
+<TotalIcuLos>1</TotalIcuLos>
+<TotalVentDays>1</TotalVentDays>
+<HospitalDischargeDate biu='1'></HospitalDischargeDate>
+<HospitalDischargeTime biu='1'></HospitalDischargeTime>
+<HospitalDischargeDisposition biu='1'></HospitalDischargeDisposition>
+<PrimaryMethodPayment>3</PrimaryMethodPayment>
+<HospitalComplications>
+	<item><HospitalComplication>5</HospitalComplication></item>
+	<item><HospitalComplication>8</HospitalComplication></item>
+	<item><HospitalComplication>38</HospitalComplication></item>
+</HospitalComplications>
+<Height>230</Height>
+<Weight>900</Weight>
+<AbuseReport>1</AbuseReport>
+<AbuseInvestigation>1</AbuseInvestigation>
+<CaregiverAtDischarge>1</CaregiverAtDischarge>
+<TraumaCenterCriteria>
+<item><TraumaCenterCriterion>1</TraumaCenterCriterion></item>
+</TraumaCenterCriteria>
+<VehicularPedestrianOthers>
+<item><VehicularPedestrianOther>1</VehicularPedestrianOther></item>
+</VehicularPedestrianOthers>
+<PrehospitalCardiacArrest>1</PrehospitalCardiacArrest>
+<DrugScreens>
+	<item><DrugScreen>1</DrugScreen></item>
+</DrugScreens>
+<AlcoholScreen>2</AlcoholScreen>
+<AlcoholScreenResult>0.99</AlcoholScreenResult>
+<NationalProviderIdentifier>0123456789</NationalProviderIdentifier>
+
+<TbiHighestTotalGcs>9</TbiHighestTotalGcs>
+<TbiGcsMotor>4</TbiGcsMotor>
+<TbiGcsQualifiers>
+<item>
+<TbiGcsQualifier>1</TbiGcsQualifier>
+</item>
+</TbiGcsQualifiers>
+<TbiCerebralMonitors>
+<item>
+<TbiCerebralMonitor>2</TbiCerebralMonitor>
+</item>
+</TbiCerebralMonitors>
+<TbiCerebralMonitorDate>2016-07-01</TbiCerebralMonitorDate>
+<TbiCerebralMonitorTime>10:00:00</TbiCerebralMonitorTime>
+<VteProphylaxisType>1</VteProphylaxisType>
+<VteProphylaxisDate>2016-07-01</VteProphylaxisDate>
+<VteProphylaxisTime>10:00:00</VteProphylaxisTime>
+<LowestSbp biu='1'></LowestSbp>
+<TransfusionBlood4Hours>0</TransfusionBlood4Hours>
+<TransfusionPlasma4Hours biu='1'></TransfusionPlasma4Hours>
+<TransfusionPlatelets4Hours biu='1'></TransfusionPlatelets4Hours>
+<Cryoprecipitate4Hours biu='1'></Cryoprecipitate4Hours>
+<TransfusionBlood24Hours biu='1'></TransfusionBlood24Hours>
+<TransfusionPlasma24Hours biu='1'></TransfusionPlasma24Hours>
+<TransfusionPlatelets24Hours biu='1'></TransfusionPlatelets24Hours>
+<Cryoprecipitate24Hours biu='1'></Cryoprecipitate24Hours>
+<Angiography biu='1'></Angiography>
+<EmbolizationSites>
+<item><EmbolizationSite>1</EmbolizationSite></item>
+</EmbolizationSites>
+<AngiographyDate biu='1'></AngiographyDate>
+<AngiographyTime biu='1'></AngiographyTime>
+<HemorrhageControlSurgeryType biu='1'></HemorrhageControlSurgeryType>
+<HemorrhageControlSurgeryDate biu='1'></HemorrhageControlSurgeryDate>
+<HemorrhageControlSurgeryTime biu='1'></HemorrhageControlSurgeryTime>
+<WithdrawalOfLifeSupportingTreatment>1</WithdrawalOfLifeSupportingTreatment>
+<WithdrawalOfLifeSupportingTreatmentDate>2016-07-01</WithdrawalOfLifeSupportingTreatmentDate>
+<WithdrawalOfLifeSupportingTreatmentTime>11:00:00</WithdrawalOfLifeSupportingTreatmentTime>
+<TransfusionBloodMeasure>1</TransfusionBloodMeasure>
+<TransfusionBloodConversion>350</TransfusionBloodConversion>
+<TransfusionPlasmaMeasure>1</TransfusionPlasmaMeasure>
+<TransfusionPlasmaConversion>350</TransfusionPlasmaConversion>
+<TransfusionPlateletsMeasure>1</TransfusionPlateletsMeasure>
+<TransfusionPlateletsConversion>350</TransfusionPlateletsConversion>
+<CryoprecipitateMeasure>1</CryoprecipitateMeasure>
+<CryoprecipitateConversion>350</CryoprecipitateConversion>
+<TbiPupillaryResponse>2</TbiPupillaryResponse>
+<TbiMidlineShift>2</TbiMidlineShift>
+
+</NtdsRecord>
+
+</NtdsRecords>

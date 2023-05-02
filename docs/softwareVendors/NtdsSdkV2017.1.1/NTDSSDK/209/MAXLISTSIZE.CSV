@@ -1,0 +1,16 @@
+Races,6
+ProtectiveDevices,10
+AirbagDeployments,4
+OtherTransportModes,5
+GcsQualifiers,3
+HospitalProcedures,200
+ComorbidConditions,26
+AisCodes,50
+HospitalComplications,22
+DiagnosesIcd10,50
+TraumaCenterCriteria,11
+VehicularPedestrianOthers,14
+DrugScreens,15
+TbiGcsQualifiers,3
+TbiCerebralMonitors,4
+EmbolizationSites,8

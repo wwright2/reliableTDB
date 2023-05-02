@@ -1,0 +1,34 @@
+Tag Name,List,Rule ID,Level,Description,Tag Name,Description,Message (Display IF <col 1> is greater than <col 6>)
+DateOfBirth,,606,2,Date of Birth,EmsNotifyDate,EMS Dispatch Date,Date of Birth is later than EMS Dispatch Date
+DateOfBirth,,607,2,Date of Birth,EmsArrivalDate,EMS Unit Arrival on Scene Date,Date of Birth is later than EMS Unit Arrival on Scene Date
+DateOfBirth,,608,2,Date of Birth,EmsLeftDate,EMS Unit Scene Departure Date,Date of Birth is later than EMS Unit Scene Departure Date
+DateOfBirth,,609,2,Date of Birth,IncidentDate,Incident Date,Date of Birth is later than Injury Date
+DateOfBirth,,610,2,Date of Birth,EdDischargeDate,ED Discharge Date,Date of Birth is later than ED Discharge Date
+DateOfBirth,,611,2,Date of Birth,HospitalDischargeDate,Hospital Discharge Date,Date of Birth is later than Hospital Discharge Date
+IncidentDate,,1205,4,Injury Incident Date,EmsNotifyDate,EMS Dispatch Date,Injury Incident Date is later than EMS Dispatch Date
+IncidentDate,,1206,4,Injury Incident Date,EmsArrivalDate,EMS Unit Arrival on Scene Date,Injury Incident Date is later than EMS Unit Arrival on Scene Date
+IncidentDate,,1207,4,Injury Incident Date,EmsLeftDate,EMS Unit Scene Departure Date,Injury Incident Date is later than EMS Unit Scene Departure Date
+IncidentDate,,1208,4,Injury Incident Date,HospitalArrivalDate,ED/Hospital Arrival Date,Injury Incident Date is later than ED/Hospital Arrival Date
+IncidentDate,,1209,4,Injury Incident Date,EdDischargeDate,ED Discharge Date,Injury Incident Date is later than ED Discharge Date
+IncidentDate,,1210,4,Injury Incident Date,HospitalDischargeDate,Hospital Discharge Date,Injury Incident Date is later than Hospital Discharge Date
+EmsNotifyDate,,2804,4,EMS Dispatch Date,EmsArrivalDate,EMS Unit Arrival on Scene Date,EMS Dispatch Date is later than EMS Unit Arrival on Scene Date
+EmsNotifyDate,,2805,4,EMS Dispatch Date,EmsLeftDate,EMS Unit Scene Departure Date,EMS Dispatch Date is later than EMS Unit Scene Departure Date
+EmsNotifyDate,,2806,3,EMS Dispatch Date,HospitalArrivalDate,ED/Hospital Arrival Date,EMS Dispatch Date is later than ED/Hospital Arrival Date
+EmsNotifyDate,,2807,4,EMS Dispatch Date,EdDischargeDate,ED Discharge Date,EMS Dispatch Date is later than ED Discharge Date
+EmsNotifyDate,,2808,3,EMS Dispatch Date,HospitalDischargeDate,Hospital Discharge Date,EMS Dispatch Date is later than Hospital Discharge Date
+EmsArrivalDate,,3005,4,EMS Unit Arrival on Scene Date,EmsLeftDate,EMS Unit Scene Departure Date,EMS Unit Arrival on Scene Date is later than EMS Unit Scene Departure Date
+EmsArrivalDate,,3006,3,EMS Unit Arrival on Scene Date,HospitalArrivalDate,ED/Hospital Arrival Date,EMS Unit Arrival on Scene Date is later than ED/Hospital Arrival Date
+EmsArrivalDate,,3007,4,EMS Unit Arrival on Scene Date,EdDischargeDate,ED Discharge Date,EMS Unit Arrival on Scene Date is later than ED Discharge Date
+EmsArrivalDate,,3008,3,EMS Unit Arrival on Scene Date,HospitalDischargeDate,Hospital Discharge Date,EMS Unit Arrival on Scene Date is later than Hospital Discharge Date
+EmsLeftDate,,3206,3,EMS Unit Scene Departure Date,HospitalArrivalDate,ED/Hospital Arrival Date,EMS Unit Scene Departure Date is later than ED/Hospital Arrival Date
+EmsLeftDate,,3207,4,EMS Unit Scene Departure Date,EdDischargeDate,ED Discharge Date,EMS Unit Scene Departure Date is later than ED Discharge Date
+EmsLeftDate,,3208,3,EMS Unit Scene Departure Date,HospitalDischargeDate,Hospital Discharge Date,EMS Unit Scene Departure Date is later than Hospital Discharge Date
+HospitalArrivalDate,,4509,2,ED/Hospital Arrival Date,EdDischargeDate,ED Discharge Date,ED/Hospital Arrival Date is later than ED Discharge Date
+HospitalArrivalDate,,4510,2,ED/Hospital Arrival Date,HospitalDischargeDate,Hospital Discharge Date,ED/Hospital Arrival Date is later than Hospital Discharge Date
+EdDischargeDate,,6308,2,ED Discharge Date,HospitalDischargeDate,Hospital Discharge Date,ED Discharge Date is later than Hospital Discharge Date
+HospitalProcedures[].HospitalProcedureStartDate,HospitalProcedures,6607,4,Hospital Procedure Start Date,HospitalDischargeDate,Hospital Discharge Date,Hospital Procedure Start Date is later than Hospital Discharge Date
+TbiCerebralMonitorDate,,10408,4,Cerebral Monitor Date,HospitalDischargeDate,Hospital Discharge Date,Cerebral Monitor Date should not be later than Hospital Discharge Date
+VteProphylaxisDate,,10707,2,Venous Thromboembolism Prophylaxis Date,HospitalDischargeDate,Hospital Discharge Date,VTE Prophylaxis Date is later than Hospital Discharge Date
+HemorrhageControlSurgeryDate,,12204,2,Surgery For Hemorrhage Control Date,HospitalDischargeDate,Hospital Discharge Date,Surgery For Hemorrhage Control Date is later than Hospital Discharge Date
+AngiographyDate,,11907,2,Angiography Date,HospitalDischargeDate,Hospital Discharge Date,Angiography Date is later than Hospital Discharge Date
+WithdrawalOfLifeSupportingTreatmentDate,,13904,2,Withdrawal Of Life Supporting Treatment Date,HospitalDischargeDate,Hospital Discharge Date,Withdrawal of Life Supporting Treatment Date is later than Hospital Discharge Date

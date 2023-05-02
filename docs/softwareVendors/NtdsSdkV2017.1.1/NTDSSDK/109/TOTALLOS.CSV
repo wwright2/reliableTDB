@@ -1,0 +1,7 @@
+Tagname,List,RuleID,Level,Description,Tag Name,Description,Value,Message (Display IF (<col 1> less <col 6>) is greater than <col 8>)
+IncidentDate,,7710,3,Injury Incident Date,HospitalDischargeDate,Hospital Discharge Date,365,"Hospital Discharge Date minus Injury Incident Date is greater than 365 days, please verify this is correct"
+HospitalArrivalDate,,7711,3,ED/Hospital Arrival Date,HospitalDischargeDate,Hospital Discharge Date,365,"Hospital Discharge Date minus ED/Hospital Arrival Date is greater than 365 days, please verify this is correct"
+HospitalArrivalDate,,6310,3,ED/Hospital Arrival Date,EdDischargeDate,ED Discharge Date,365,ED Discharge Date minus ED/Hospital Arrival Date is greater than 365 days
+EmsNotifyDate,,3009,3,EMS Dispatch Date,EmsArrivalDate,EMS Unit Arrival on Scene Date,7,EMS Unit Arrival on Scene Date minus EMS Dispatch Date is greater than 7 days
+EmsArrivalDate,,3209,3,EMS Unit Arrival on Scene Date,EmsLeftDate,EMS Unit Scene Departure Date,7,EMS Unit Scene Departure Date minus EMS Unit Arrival on Scene Date is greater than 7 days
+EmsNotifyDate,,4514,3,EMS Dispatch Date,HospitalArrivalDate,ED/Hospital Arrival Date,7,ED/Hospital Arrival Date minus EMS Dispatch Date is greater than 7 days
