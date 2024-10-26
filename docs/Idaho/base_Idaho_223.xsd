@@ -1,0 +1,2108 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="datatype_Idaho_all.xsd" />
+	<xs:element name="ITRRecords">
+		<xs:annotation>
+			<xs:documentation>Root Element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded"
+          					minOccurs="0"
+          					name="ITRRecord">
+					<xs:complexType>
+						<xs:all>
+							<xs:element id="C_9901"
+          								name="LastModifiedDateTime"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The last date/time that the source record was modified in its Registry.</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:dateTime" />
+								</xs:simpleType>
+							</xs:element>
+							<xs:element id="C_9902"
+          								name="PatientId"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>Patient ID</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string" />
+								</xs:simpleType>
+							</xs:element>
+							<xs:element id="C_9903"
+          								name="FacilityId"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>Facility ID</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string" />
+								</xs:simpleType>
+							</xs:element>
+<!-- Demographics -->	
+							<xs:element id="D_1001"
+          								name="PatientLastName"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s Last Name</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1002"
+          								name="PatientFirstName"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s First Name</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1003"
+          								name="PatientMiddleName"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s middle name</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1004"
+          								name="SocialSecurityNumber"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s social security number</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="SocialSecurityNumber">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1201"
+          								name="HomeZip"
+										minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s home ZIP code of primary residence.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Zip">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1202"
+          								name="HomeCountry"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The country where the patient resides.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Country">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1203"
+          								name="HomeState"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The state (territory, province, or District of Columbia) where the patient resides.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="State">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1204"
+          								name="HomeCounty"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s county (or parish) of residence.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="County">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1205"
+          								name="HomeCity"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s city (or township, or village) of residence.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="City">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="HomeResidences"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="3">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="D_1206"
+          														name="HomeResidence">
+														<xs:annotation>
+															<xs:documentation>Documentation of the type of patient without a home ZIP/Postal Code.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="HomeResidence">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1207"
+          								name="DateOfBirth"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s date of birth.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="DateOfBirth">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1208"
+          								name="Age"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s age at the time of injury (best approximation)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Age">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1209"
+          								name="AgeUnits"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The units used to document the patient&apos;s age (Years, Months, Days, Hours, Minutes)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="AgeUnits">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Races"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="6">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="D_1210"
+          														name="Race">
+														<xs:annotation>
+															<xs:documentation>The patient&apos;s race.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="Race">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1211"
+          								name="Ethnicity"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s ethnicity.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Ethnicity">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="D_1212"
+          								name="Sex"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s sex.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Sex">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+<!-- Injury -->	
+							<xs:element id="I_0201"
+          								name="IncidentDate"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The date the injury occurred.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0202"
+          								name="IncidentTime"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The time the injury occurred.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0203"
+          								name="WorkRelated"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Indication of whether the injury occurred during paid employment.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="YesNo">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0204"
+          								name="PatientsOccupationalIndustry"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The occupational industry associated with the patient&apos;s work environment.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PatientsOccupationalIndustry">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0205"
+          								name="PatientsOccupation"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The occupation of the patient.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PatientsOccupation">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_1000"
+          								name="PatientsOccupationalIndustryOther"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Patient&apos;s industry if other than one found in the Data Dictionary listing.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_1001"
+          								name="PatientsOccupationOther"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Patient&apos;s occupation if it is not listed in the Data Dictionary.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0206"
+          								name="PrimaryECodeIcd10"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>ICD-10 External cause code  used to describe the mechanism (or external factor) that caused the injury event (ICD-10).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ECodeIcd10">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AdditionalECodeIcd10s"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="2">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="I_0208"
+          														name="AdditionalECodeIcd10">
+														<xs:annotation>
+															<xs:documentation>Additional E-code used to describe, for example, a mass casualty event, or other external cause (ICD-10).</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="ECodeIcd10">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0207"
+          								name="PlaceOfInjuryCode"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>ICD-10 Place of occurrence external cause code used to describe the place/site/location of the injury event (Y92.X).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PlaceOfInjuryCode">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0209"
+          								name="InjuryZip"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The ZIP code of the incident location.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Zip">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0210"
+          								name="IncidentCountry"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The country where the patient was found or to which the unit responded (two-digit alpha country code).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Country">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0211"
+          								name="IncidentState"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The state, territory, or province where the patient was found or to which the unit responded (two-digit numeric FIPS code).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="State">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0212"
+          								name="IncidentCounty"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The name of the county in which injury occurred. (three-digit numeric FIPS code)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="County">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0213"
+          								name="IncidentCity"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The city or township where the patient was found or to which the unit responded (five-digit numeric FIPS code).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="City">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ProtectiveDevices"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="10">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="I_0214"
+          														name="ProtectiveDevice">
+														<xs:annotation>
+															<xs:documentation>Protective devices (safety equipment) in use or worn by the patient at the time of the injury.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="ProtectiveDevice">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0215"
+          								name="ChildSpecificRestraint"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Protective child restraint devices used by patient at the time of injury.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ChildSpecificRestraint">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AirbagDeployments"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="4">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="I_0216"
+          														name="AirbagDeployment">
+														<xs:annotation>
+															<xs:documentation>Indication of an airbag deployment during a motor vehicle crash.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="AirbagDeployment">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_0220"
+          								name="TraumaType"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The type of force that caused the injury.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="TraumaType">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="I_1002"
+          								name="InjuryDescriptionText"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Text field for describing the circumstances surrounding an injury.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+<!-- Pre-Hospital EMS -->	
+							<xs:element id="P_1000"
+          								name="EMSAgencyID"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The ID number of the EMS transport agency that delivers the patient to the hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="EMSAgencyID">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="P_1001"
+          								name="EMSAgencyName"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Name of the EMS transport agency that delivers the patient to the hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="P_0307"
+          								name="TransportMode"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The mode of transport delivering the patient to your hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="TransportMode">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OtherTransportModes"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="5">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="P_0308"
+          														name="OtherTransportMode">
+														<xs:annotation>
+															<xs:documentation>All other modes of transport used during patient care event, except the mode delivering the patient to your hospital.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="TransportMode">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="P_0317"
+          								name="InterFacilityTransfer"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Was the patient transferred to your facility from another acute care facility?</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="YesNo">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="P_0320"
+          								name="PrehospitalCardiacArrest"
+										minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Indication of whether patient experienced cardiac arrest prior to ED/Hospital arrival.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="YesNo">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="P_0325"
+										name="PatientUUID"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patients universally unique identifier (UUID) as assigned by the emergency medical service (EMS) agency transporting the patient from the scene of injury to your hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PatientUUID">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+<!-- Hospital (ED) Emergency Department -->	
+							<xs:element id="ED_0401"
+          								name="HospitalArrivalDate"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The date the patient arrived to the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0402"
+          								name="HospitalArrivalTime"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The time the patient arrived to the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0403"
+          								name="Sbp"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded systolic blood pressure in the ED/Hospital</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Sbp">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_1007"
+          								name="Dbp"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded diastolic blood pressure in the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Dbp">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0404"
+          								name="PulseRate"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded pulse in the ED/hospital (palpated or auscultated), expressed as a number per minute.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PulseRate">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0405"
+          								name="Temperature"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded temperature (in degrees celsius/centrigrade) in the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Temperature">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_1008"
+          								name="TemperatureFahrenheit"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded temperature (in degrees Fahrenheit) in the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="TemperatureFahrenheit">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0406"
+          								name="RespiratoryRate"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded respiratory rate in the ED/hospital (expressed as a number per minute).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="RespiratoryRate">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0407"
+          								name="RespiratoryAssistance"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Determination of respiratory assistance associated with the initial ED/hospital respiratory rate.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="RespiratoryAssistance">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0408"
+          								name="PulseOximetry"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded oxygen saturation in the ED/hospital (expressed as a percentage).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PulseOximetry">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0409"
+          								name="SupplementalOxygen"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Determination of the presence of supplemental oxygen during assessment of initial ED/hospital oxygen saturation level.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="SupplementalOxygen">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0410"
+          								name="GcsEye"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded Glasgow Coma Score (Eye) in the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="GcsEye">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0411"
+          								name="GcsVerbal"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded Glasgow Coma Score (Verbal) in the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="GcsVerbal">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0412"
+          								name="GcsMotor"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded Glasgow Coma Score (Motor) in the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="GcsMotor">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0413"
+          								name="TotalGcs"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded Glasgow Coma Score (total) in the ED/hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="TotalGcs">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="GcsQualifiers"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="3">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="ED_0414"
+          														name="GcsQualifier">
+														<xs:annotation>
+															<xs:documentation>Documentation of factors potentially affecting the first assessment of GCS upon arrival in the ED/hospital.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="GcsQualifier">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0428"
+          								name="Gcs40Eye"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded Glasgow Coma Score 40 (Eye) in the ED/hospital within 30 minutes or less of ED/hospital arrival.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Gcs40Eye">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0429"
+          								name="Gcs40Verbal"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded Glasgow Coma Score 40 (Verbal) within 30 minutes or less of ED/hospital arrival.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Gcs40Verbal">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0430"
+          								name="Gcs40Motor"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded Glasgow Coma Score 40 (Motor) within 30 minutes or less of ED/hospital arrival.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Gcs40Motor">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0415"
+          								name="Height"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s height.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Height">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0416"
+          								name="Weight"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient&apos;s weight.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Weight">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DrugScreens"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="15">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="ED_0417"
+          														name="DrugScreen">
+														<xs:annotation>
+															<xs:documentation>Use of drugs by the patient.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="DrugScreen">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0419"
+          								name="AlcoholScreen"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>A blood alcohol concentration (BAC) test was performed on the patient within 24 hours after first hospital encounter.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="YesNo">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0420"
+          								name="AlcoholScreenResult"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>First recorded blood alcohol concentration (BAC) results within 24 hours after first hospital encounter.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="AlcoholScreenResult">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0422"
+          								name="EdDischargeDisposition"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The disposition of the patient at the time of discharge from the ED.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="EdDischargeDisposition">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_1012"
+          								name="RevisedTraumaScore"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Calculated from the GCS, SBP and Resp Rate and is a component of TRISS</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="RevisedTraumaScore">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_1022"
+          								name="MSEDate"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The date the initial vital signs or medical screening exam occurred</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_1020"
+          								name="MSETime"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The time the initial vital signs or medical screening exam occurred</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0431"
+          								name="TraumaTeamInvolvement"
+										minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>This is a helper field which may be used in determining inclusion criteria for the patient record.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="YesNo">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0424"
+          								name="EdDischargeOrdersWrittenDate"
+										minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The date the order was written for the patient to be discharged from the ED.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0425"
+          								name="EdDischargeOrdersWrittenTime"
+										minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The time the order was written for the patient to be discharged from the ED.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0426"
+          								name="EdDischargePhysicalDate"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The date the patient was discharged from the ED.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0427"
+          								name="EdDischargePhysicalTime"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The time the patient was discharged from the ED.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_1000"
+          								name="DirectAdmission"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Indicates whether the patient was directly admitted to the hospital</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="YesNo">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_1001"
+          								name="Readmission"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Indication of hospital readmission within 30 days of discharge for any reason related to the trauma incident</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="YesNo">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0432"
+										name="HighestActivation"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Patient received the highest level of trauma activation at your hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="YesNo">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0433"
+										name="TraumaSurgeonArrivalDate"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The date the first trauma surgeon arrived at the patients bedside.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="ED_0434"
+										name="TraumaSurgeonArrivalTime"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The date the first trauma surgeon arrived at the patients bedside.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+<!-- new for 2023 schema -->
+							<xs:element id="ED_0436"
+          								name="PrimaryTraumaServiceType"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The primary service type responsible for the care of this patient.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PrimaryTraumaServiceType">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+<!-- new for 2023 schema -->
+							<xs:element id="ED_1025"
+          								name="TraumaTeamLevel"
+          								minOccurs="1">
+								<xs:annotation>
+									<xs:documentation>The highest level of activation by EMS or hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="TraumaTeamLevel">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+<!-- new for 2023 schema -->
+							<xs:element id="ED_1026"
+										name="VentilatorDate"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The date patient first placed on ventilator, including pre-hospital care.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+<!-- new for 2023 schema -->
+							<xs:element id="ED_1027"
+										name="VentilatorTime"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Time patient first placed on ventilator, including pre-hospital care.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+<!-- new for 2023 schema -->
+<!-- TQIP - Packed Red Blood Cells -->
+							<xs:element id="PM_5104" minOccurs="1" name="PackedRedBloodCells">
+								<xs:annotation>
+									<xs:documentation>Volume of packed red blood cells transfused (units or CCs) within first 4 hours after ED/hospital arrival.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Fluids4Hours">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+<!-- Hospital Procedures, DxCodes, AIS, complications and Comorbid Conditions -->
+							<xs:element name="HospitalProcedures"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="200">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="HP_0501"
+          														name="HospitalProcedureIcd10">
+														<xs:annotation>
+															<xs:documentation>Operative and essential procedures conducted during hospital stay (ICD-10).</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="HospitalProcedureIcd10">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element id="HP_0502"
+          														name="HospitalProcedureStartDate">
+														<xs:annotation>
+															<xs:documentation>The date operative and essential procedures were performed.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="Date19902030">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element id="HP_0503"
+          														name="HospitalProcedureStartTime">
+														<xs:annotation>
+															<xs:documentation>The time operative and essential procedures were performed.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="Time">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="HospitalComplications"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											maxOccurs="23">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="Q_1001"
+          														name="HospitalComplication">
+														<xs:annotation>
+															<xs:documentation>Any medical complication that occurred during the patient&apos;s stay at your hospital.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="HospitalComplication">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ComorbidConditions"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="31">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="DG_0601"
+          														name="ComorbidCondition">
+														<xs:annotation>
+															<xs:documentation>Pre-existing co-morbid factors present before patient arrival at the ED/hospital. </xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="ComorbidCondition">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="DG_1001"
+          								name="DiagnosisMemo"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Text field for clarifying information for diagnosis-related ICD-10 codes</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DiagnosesIcd10"
+          								minOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="1"
+          											maxOccurs="50">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="DG_0602"
+          														name="DiagnosisIcd10">
+														<xs:annotation>
+															<xs:documentation>Diagnoses related to all identified injuries (ICD-10).</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="DiagnosisIcd10">
+																	<xs:attribute ref="biu"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="AisCodes"
+          								minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item"
+          											minOccurs="0"
+          											maxOccurs="50">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element id="IS_0701"
+          														name="AisPredot">
+														<xs:annotation>
+															<xs:documentation>The Abbreviated Injury Scale (AIS) predot codes that reflect the patient&apos;s injuries.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="AisPredot">
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element id="IS_0702"
+          														name="AisSeverity">
+														<xs:annotation>
+															<xs:documentation>The Abbreviated Injury Scale (AIS) severity codes that reflect the patient&apos;s injuries.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="AisSeverity">
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element id="IS_0703"
+          														name="IssRegion">
+														<xs:annotation>
+															<xs:documentation>The Injury Severity Score (ISS) body region codes that reflects the patient&apos;s injuries.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="IssRegion">
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="IS_0704"
+          								name="AisVersion"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The software (and version) used to calculate Abbreviated Injury Scale (AIS) severity codes.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="AisVersion">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="IS_0705"
+          								name="IssLocal"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Injury Severity Score (ISS) that reflects the patient&apos;s injuries.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ISS">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="IS_1001"
+          								name="TRISS"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Calculated field for estimating the probability of survival</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="TRISS">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+<!-- Outcomes -->
+							<xs:element id="O_0801"
+          								name="TotalIcuLos"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The total number of patient days in any ICU (including all episodes).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="TotalIcuLos">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="O_0802"
+          								name="TotalVentDays"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The total number of patient days spent on a mechanical ventilator (including all episodes).</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="TotalVentDays">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="O_0803"
+          								name="HospitalDischargeOrdersWrittenDate"
+										minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The date the order was written for the patient to be discharged from the hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="O_0804"
+          								name="HospitalDischargeOrdersWrittenTime"
+										minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The time the order was written for the patient to be discharged from the hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="O_0805"
+          								name="HospitalPhysicalDischargeDate"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The date the patient was discharged from the hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="O_0806"
+          								name="HospitalPhysicalDischargeTime"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The time the patient was discharged from the hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="O_0807"
+          								name="HospitalDischargeDisposition"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The disposition of the patient when discharged from the hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="HospitalDischargeDisposition">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+<!-- Other Hospital Items -->
+							<xs:element id="F_0901"
+          								name="PrimaryMethodPayment"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Primary source of payment for hospital care.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PrimaryMethodPayment">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="H_1000"
+          								name="HospitalCreatedDate"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Date data entry for the trauma incident was initiated.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Date19902030">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="H_1001"
+          								name="HospitalCreatedTime"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The time data entry for the trauma incident was initiated.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Time">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="H_1003"
+          								name="MedicalRecordNumber"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Number that identifies a patient&apos;s records across multiple admissions to a given hospital.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="H_1006"
+          								name="HospitalTransferredFrom"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Medicare ID number of the acute care hospital the patient was transferred from by ambulance.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="H_1007"
+          								name="HospitalTransferredFromName"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Name of the acute care hospital the patient was transferred from by ambulance.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="H_1008"
+          								name="HospitalTransferredTo"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Medicare ID number of the acute care hospital the patient was transferred to by ambulance.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="H_1009"
+          								name="Registrar"
+          								minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Three initials representing the name of the registrar abstracting the trauma case for submission to ITR</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="biu"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element id="SSR_1101"
+          								name="NationalProviderIdentifier"
+										minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The National Provider Identifier (NPI) of the admitting surgeon.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="NationalProviderIdentifier">
+											<xs:attribute ref="biu" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+
+
+<!-- ******************************************************************************* -->
+<!-- *** Retired Elements - backward compatibility ********************************* -->
+<!-- ******************************************************************************* -->
+
+			<xs:element id="P_0301"
+						name="EmsNotifyDate"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The date the unit transporting to your hospital was notified by dispatch.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Date19902030">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0302"
+						name="EmsNotifyTime"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The time the unit transporting to your hospital was notified by dispatch.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Time">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0303"
+						name="EmsArrivalDate"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The date the unit transporting to your hospital arrived on the scene.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Date19902030">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0304"
+						name="EmsArrivalTime"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The time the unit transporting to your hospital arrived on the scene (the time the vehicle stopped moving).</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Time">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0305"
+						name="EmsLeftDate"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The date the unit transporting to your hospital left the scene.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Date19902030">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0306"
+						name="EmsLeftTime"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>The time the unit transporting to your hospital left the scene (the time the vehicle started moving).</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Time">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0309"
+						name="EmsSbp"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded systolic blood pressure in the pre-hospital setting.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Sbp">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0310"
+						name="EmsPulseRate"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded pulse in the pre-hospital setting (palpated or auscultated), expressed as a number per minute.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="PulseRate">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0311"
+						name="EmsRespiratoryRate"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded respiratory rate in the pre-hospital setting (expressed as a number per minute).</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="RespiratoryRate">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0312"
+						name="EmsPulseOximetry"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded oxygen saturation in the pre-hospital setting (expressed as a percentage).</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="PulseOximetry">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0313"
+						name="EmsGcsEye"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded Glasgow Coma Score (Eye) in the pre-hospital setting.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="GcsEye">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0314"
+						name="EmsGcsVerbal"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded Glasgow Coma Score (Verbal) in the pre-hospital setting.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="GcsVerbal">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0315"
+						name="EmsGcsMotor"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded Glasgow Coma Score (Motor) in the pre-hospital setting.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="GcsMotor">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0316"
+						name="EmsTotalGcs"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded Glasgow Coma Score (total) in the pre-hospital setting.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TotalGcs">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0321"
+						name="EmsGcs40Eye"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded Glasgow Coma Score 40 (Eye) measured at the scene of injury.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Gcs40Eye">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0322"
+						name="EmsGcs40Verbal"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded Glasgow Coma Score 40 (Verbal) measured at the scene of injury.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Gcs40Verbal">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element id="P_0323"
+						name="EmsGcs40Motor"
+						minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>First recorded Glasgow Coma Score 40 (Motor) measured at the scene of injury.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Gcs40Motor">
+							<xs:attribute ref="biu"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+
+<!-- *** Retired Elements - backward compatibility ********************************* -->
+
+
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute fixed="Itdx_v2020"
+            				name="ItdxVersion"
+            				use="optional" />
+			<xs:attribute name="ITRVersion"
+            				use="optional"
+            				fixed="v2020"/>
+			<xs:attribute fixed="ICD10CA"
+            				name="icd10"
+            				use="optional" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

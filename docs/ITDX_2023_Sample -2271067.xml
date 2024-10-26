@@ -1,0 +1,568 @@
+<?xml version="1.0"?>
+<ItdxRecords ItdxVersion="Itdx_v2023">
+  <ItdxRecord>
+  <Extensions>
+			<TX_Extensions>
+				<TX_PatientLastName>Unknown</TX_PatientLastName>
+				<TX_PatientFirstName>Unknown</TX_PatientFirstName>
+				<TX_PatientMiddleName biu='2'></TX_PatientMiddleName> 
+				<TX_PatientStreetAddress>123 main st</TX_PatientStreetAddress> 
+				<TX_MedicalRecordNumber>34</TX_MedicalRecordNumber> 
+				<TX_SocialSecurityNumber>123-45-6789</TX_SocialSecurityNumber> 
+				<TX_InjuryMechanism biu='2'></TX_InjuryMechanism>
+				<TX_RfFacilityId>2271083</TX_RfFacilityId>
+				<TX_DischargeToFacilityId>2271083</TX_DischargeToFacilityId>
+				<TX_PhProviderAgencyId>300210</TX_PhProviderAgencyId>
+				<TX_TransferHospitalEmsId>300210</TX_TransferHospitalEmsId>
+				<TX_InjuryType>4</TX_InjuryType>
+				<TX_HospitalProcedures>
+					<item>
+						<HospitalProcedureIcd10>BW03ZZZ</HospitalProcedureIcd10>
+						<HospitalProcedureStartDate>2023-02-01</HospitalProcedureStartDate>
+						<HospitalProcedureStartTime>001500</HospitalProcedureStartTime>
+						<HospitalProcedureLocation biu='2'></HospitalProcedureLocation>
+					</item>
+				</TX_HospitalProcedures>
+		</TX_Extensions>
+    </Extensions>
+	<!--Control/Linkage Information-->
+    <LastModifiedDateTime>2023-08-26T10:06:17</LastModifiedDateTime>
+    <HospitalSystemTraumaNumber biu="2"/>
+    <PatientId>33356412</PatientId>
+    <FacilityId>2271067</FacilityId>
+	<!--Transports and Interfacility Linkages-->
+    <RecordLinkages>
+      <item>
+        <LinkageType>1</LinkageType>
+        <LinkageStateId>48</LinkageStateId>
+        <LinkageFacilityId>2271067</LinkageFacilityId>
+        <LinkageRecordId>123</LinkageRecordId>
+        <LinkageGlobalKey>456</LinkageGlobalKey>
+      </item>
+    </RecordLinkages>
+	<!--Demographic Information-->
+    <HomeZip>78759</HomeZip>
+    <HomeCountry>US</HomeCountry>
+	<HomeState biu="1" /><!-- HomeState must be Not Applicable when patient's homeZip/postcode is reported -->
+	<HomeCounty biu="1" /><!-- HomeCounty must be Not Applicable when patient's homeZip/postcode is reported -->
+    <HomeCity biu="1" /><!-- HomeCity must be Not Applicable when patient's homeZip/postcode is reported -->
+    <HomeResidences>
+      <item>
+        <HomeResidence>1</HomeResidence>
+      </item>
+    </HomeResidences>
+    <DateOfBirth>1998-01-01</DateOfBirth><!-- If Date of Birth is Not Applicable, report Age and Age Units -->
+    <Age biu="1"></Age>
+    <AgeUnits biu="1"></AgeUnits>
+    <Races>
+      <item>
+        <Race>3</Race>
+      </item>
+    </Races>
+    <Ethnicity>1</Ethnicity>
+    <Sex>1</Sex>
+	<!--Injury Information-->						
+    <IncidentDate>2023-01-31</IncidentDate>
+    <IncidentTime>232200</IncidentTime>
+    <WorkRelated>1</WorkRelated>
+	<PatientsOccupationalIndustry>12</PatientsOccupationalIndustry>
+    <PatientsOccupation>23</PatientsOccupation><!-- If Work-Related is Yes, Patient's Occupation cannot be Not Applicable -->
+    <PrimaryECodeIcd10>W10.8XXA</PrimaryECodeIcd10>
+    <PlaceOfInjuryCode>Y92.59</PlaceOfInjuryCode>
+    <AdditionalECodesIcd10>
+      <item>
+        <AdditionalECodeIcd10>123</AdditionalECodeIcd10>
+      </item>
+    </AdditionalECodesIcd10>
+    <InjuryZip biu="1"/>
+    <IncidentCountry>US</IncidentCountry>
+	<IncidentState>48</IncidentState>
+    <IncidentCounty>227</IncidentCounty>
+    <IncidentCity>48227</IncidentCity><!-- 48=TX, 227=HOWARD -->
+    <ProtectiveDevices>
+      <item>
+        <ProtectiveDevice>1</ProtectiveDevice>
+      </item>
+    </ProtectiveDevices>
+    <ChildSpecificRestraint>3</ChildSpecificRestraint>
+    <AirbagDeployments>
+      <item>
+        <AirbagDeployment>2</AirbagDeployment>
+      </item>
+    </AirbagDeployments>
+	<AbuseReport>1</AbuseReport>
+    <AbuseInvestigation>1</AbuseInvestigation><!-- Field must be Not Applicable when Report of Physical Abuse is No -->
+    <CaregiverAtDischarge>1</CaregiverAtDischarge><!-- 1=Yes -->
+    <TraumaType>1</TraumaType>
+	<!--Prehospital Information-->
+    <EmsNotifyDate>2023-01-31</EmsNotifyDate>
+    <EmsNotifyTime>232500</EmsNotifyTime>
+    <EmsArrivalDate>2023-01-31</EmsArrivalDate>
+    <EmsArrivalTime>233000</EmsArrivalTime>
+    <EmsLeftDate>2023-01-31</EmsLeftDate>
+    <EmsLeftTime>233800</EmsLeftTime>
+    <TransportMode>1</TransportMode>
+    <OtherTransportModes>
+      <item>
+		<OtherTransportMode>6</OtherTransportMode>
+      </item>
+    </OtherTransportModes>
+    <RegionalTraumaNumber biu="2"/>
+    <StateTraumaNumber>1111111</StateTraumaNumber>
+    <EmsSbp>115</EmsSbp>
+    <EmsDbp biu="2"/>
+    <EmsPulseRate>64</EmsPulseRate>
+    <EmsRespiratoryRate>16</EmsRespiratoryRate>
+    <EmsPulseOximetry>96</EmsPulseOximetry>
+    <EmsGcsEye>4</EmsGcsEye>
+    <EmsGcsVerbal>5</EmsGcsVerbal>
+    <EmsGcsMotor>6</EmsGcsMotor>
+    <EmsTotalGcs>15</EmsTotalGcs>
+	<!--Added GCS40 elements in 2019-->
+    <EmsGcs40Eye biu="2" /><!-- Element must be Not Known or Not Recorded when Initial Field GCS 40 Eye is reported -->
+    <EmsGcs40Verbal biu="2" /><!-- Element must be Not Known or Not Recorded when Initial Field GCS 40 Verbal is reported -->
+    <EmsGcs40Motor biu="2" /><!-- Element must be Not Known or Not Recorded when Initial Field GCS 40 Motor is reported -->
+    <InterFacilityTransfer>2</InterFacilityTransfer>
+	<!--New for 2014-->
+    <TraumaCenterCriteria>
+      <item>
+        <TraumaCenterCriterion>1</TraumaCenterCriterion>
+      </item>
+    </TraumaCenterCriteria>
+    <VehicularPedestrianOthers>
+      <item>
+        <VehicularPedestrianOther>2</VehicularPedestrianOther>
+      </item>
+    </VehicularPedestrianOthers>
+	<!--New for 2015????-->
+    <PrehospitalCardiacArrest>2</PrehospitalCardiacArrest>
+    <NationalFieldTriageCriteria biu="2"/> <NationalFieldTriage>
+	<item>
+		<NationalFieldTriage></NationalFieldTriage>
+	</item>
+    </NationalFieldTriage>
+	<!--Emergency Department Information-->
+    <HospitalArrivalDate>2023-02-01</HospitalArrivalDate>
+    <HospitalArrivalTime>000605</HospitalArrivalTime>
+	<!--New for 2021-->	
+    <HighestTraumaActivation biu="2"/>
+	<!--New for 2021-->
+    <TraumaSurgeonHighestActivationArrivalDate biu="2"/>
+	<!--New for 2021-->		
+    <TraumaSurgeonHighestActivationArrivalTime biu="2"/>
+    <Sbp>120</Sbp>
+    <Dbp biu="2"/>
+    <PulseRate>80</PulseRate>
+    <Temperature>36</Temperature>
+    <RespiratoryRate>15</RespiratoryRate>
+    <RespiratoryAssistance>1</RespiratoryAssistance>
+    <PulseOximetry>98</PulseOximetry>
+    <SupplementalOxygen>1</SupplementalOxygen>
+    <GcsEye>3</GcsEye>
+    <GcsVerbal>4</GcsVerbal>
+    <GcsMotor>6</GcsMotor>
+    <TotalGcs>13</TotalGcs>
+    <GcsQualifiers>
+      <item>
+        <GcsQualifier>4</GcsQualifier>
+      </item>
+    </GcsQualifiers>
+    <Gcs40Eye biu="2"/>
+    <Gcs40Verbal biu="2"/><!-- The null value Not Known or Not Recorded is reported if Initial ED/Hospital GCS when Verbal is reported -->
+    <Gcs40Motor biu="2" />
+    <Height>55</Height><!-- 30 to 275 CM -->
+    <Weight>30</Weight><!-- 1 to 650 KG -->
+    <DrugScreens>
+      <item>
+        <DrugScreen>14</DrugScreen>
+      </item>
+    </DrugScreens>
+    <AlcoholScreen>1</AlcoholScreen>
+    <AlcoholScreenResult>0.3</AlcoholScreenResult>
+    <EdDischargeDisposition>3</EdDischargeDisposition>
+    <TraumaTeamInvolvement>1</TraumaTeamInvolvement>
+    <DeathInEd>2</DeathInEd>
+    <EdDischargeOrdersWrittenDate>2023-02-01</EdDischargeOrdersWrittenDate>
+    <EdDischargeOrdersWrittenTime>015100</EdDischargeOrdersWrittenTime>
+    <EdDischargePhysicalDate>2023-02-01</EdDischargePhysicalDate>
+    <EdDischargePhysicalTime>043000</EdDischargePhysicalTime>
+    <PrimaryTraumaServiceType></PrimaryTraumaServiceType>
+	<!--Hospital Procedure Information-->				
+    <HospitalProcedures>
+      <item>
+        <HospitalProcedureIcd10>BW03ZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2023-02-01</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>001500</HospitalProcedureStartTime>
+      </item>
+	  <item>
+        <HospitalProcedureIcd10>BR0CZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2023-02-01</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>001700</HospitalProcedureStartTime>
+      </item>
+      <item>
+        <HospitalProcedureIcd10>BW28ZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2023-02-01</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>004000</HospitalProcedureStartTime>
+      </item>
+      <item>
+        <HospitalProcedureIcd10>BR20ZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2023-02-01</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>004000</HospitalProcedureStartTime>
+      </item>
+      <item>
+        <HospitalProcedureIcd10>BW40ZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2023-02-01</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>001800</HospitalProcedureStartTime>
+      </item>
+    </HospitalProcedures>
+	<!--Comorbid Conditions-->
+    <ComorbidConditions>
+      <item>
+		<ComorbidCondition>2</ComorbidCondition><!-- please see 2023 data dictionary for Pre-existing Conditions -->
+      </item>
+    </ComorbidConditions>
+	<!--Diagnoses Information-->					
+    <DiagnosesIcd10>
+      <item>
+        <DiagnosisIcd10>S06.0X1A</DiagnosisIcd10>
+      </item>
+    </DiagnosesIcd10>
+	<!--Injury Severity Information-->
+    <AisCodes>
+      <item>
+        <AisPredot>161004</AisPredot>
+        <AisSeverity>2</AisSeverity>
+		<IssRegion>1</IssRegion>
+      </item>
+    </AisCodes>
+    <AisVersion>6</AisVersion>
+    <IssCalculated>4</IssCalculated>
+	<!--Outcome Information-->
+    <TotalIcuLos biu="1"></TotalIcuLos>
+    <TotalVentDays biu="1"></TotalVentDays>
+    <HospitalDischargeOrdersWrittenDate>2023-02-01</HospitalDischargeOrdersWrittenDate>
+    <HospitalDischargeOrdersWrittenTime>111300</HospitalDischargeOrdersWrittenTime>
+    <HospitalPhysicalDischargeDate>2023-02-01</HospitalPhysicalDischargeDate>
+    <HospitalPhysicalDischargeTime>114000</HospitalPhysicalDischargeTime>
+    <HospitalDischargeDisposition>6</HospitalDischargeDisposition>
+	<!--Financial Information-->
+    <PrimaryMethodPayment>4</PrimaryMethodPayment>
+	<!--Quality Assurance Information-->
+    <HospitalComplications>
+      <item>
+        <HospitalComplication biu="1" />
+      </item>
+    </HospitalComplications>
+	<!--National Provider Identifier Information-->
+    <NationalProviderIdentifier>1234567890</NationalProviderIdentifier><!-- Must be stored as a 10-digit numeric value -->
+	<!--Measures For Processes of Care-->
+    <TbiHighestTotalGcs>10</TbiHighestTotalGcs>
+    <TbiGcsMotor>3</TbiGcsMotor><!-- 0 to 6 --><!-- The null value Not Known or Not Recorded is reported if reporting Highest GCS Motor 40 -->
+    <TbiGcsQualifiers>
+      <item>
+        <TbiGcsQualifier biu="2" />
+      </item>
+    </TbiGcsQualifiers>
+    <TbiGcs40Motor biu="2" />
+    <TbiPupillaryResponse>1</TbiPupillaryResponse>
+    <TbiMidlineShift>2</TbiMidlineShift>
+    <TbiCerebralMonitors>
+      <item>
+        <TbiCerebralMonitor biu="2"/><!-- Element must be Not Applicable as the AIS codes provided do not meet the reporting criterion -->
+      </item>
+    </TbiCerebralMonitors>
+	<TbiCerebralMonitorDate>2023-02-01</TbiCerebralMonitorDate>
+    <TbiCerebralMonitorTime>025100</TbiCerebralMonitorTime>
+    <VteProphylaxisType>5</VteProphylaxisType>
+    <VteProphylaxisDate biu="1" />
+    <VteProphylaxisTime biu="1" />
+    <TransfusionBlood4Hours>0</TransfusionBlood4Hours>
+    <TransfusionPlasma4Hours>0</TransfusionPlasma4Hours>
+    <TransfusionPlatelets4Hours>0</TransfusionPlatelets4Hours>
+    <WholeBlood4Hours>1</WholeBlood4Hours>
+    <Cryoprecipitate4Hours>0</Cryoprecipitate4Hours>
+    <LowestSbp>200</LowestSbp>
+    <Angiography>1</Angiography>
+    <EmbolizationSites>
+      <item>
+        <EmbolizationSite biu="1" />
+      </item>
+    </EmbolizationSites>
+    <AngiographyDate biu="1" />
+    <AngiographyTime biu="1" />
+    <HemorrhageControlSurgeryType>6</HemorrhageControlSurgeryType>
+    <HemorrhageControlSurgeryDate>2023-02-01</HemorrhageControlSurgeryDate>
+    <HemorrhageControlSurgeryTime>023000</HemorrhageControlSurgeryTime>
+    <WithdrawalOfLifeSupportingTreatment>2</WithdrawalOfLifeSupportingTreatment><!-- 1=yes, 2=No -->
+    <WithdrawalOfLifeSupportingTreatmentDate biu="1" />
+    <WithdrawalOfLifeSupportingTreatmentTime biu="1" />
+	<AntibioticTherapy>1</AntibioticTherapy>
+    <AntibioticTherapyDate>2023-02-01</AntibioticTherapyDate>
+    <AntibioticTherapyTime>023000</AntibioticTherapyTime>
+	<!--Explicit Negatives Information-->				
+    <ExplicitNegatives>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>4</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>36</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>5</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>8</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>33</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>34</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>12</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>39</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>14</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>15</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>18</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>19</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>29</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>37</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>21</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>32</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>22</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>38</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>31</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>25</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>40</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>35</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>1</ElementKey>
+        <ValueKey>1</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>30</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>13</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>2</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>32</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>31</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>4</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>5</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>7</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>25</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>6</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>23</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>10</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>26</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>15</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>11</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>12</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>19</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>33</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>34</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>35</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>38</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>37</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>9</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>8</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>24</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>36</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+      <item>
+        <ElementKey>2</ElementKey>
+        <ValueKey>1</ValueKey>
+        <ExplicitNegative>2</ExplicitNegative>
+      </item>
+    </ExplicitNegatives>
+	<!--Explicit Vitals Information-->
+    <ExplicitTimeliness>
+      <item>
+        <TimelinessKey/>
+		<EtDate>2023-10-10</EtDate>
+        <EtTime>001500</EtTime>
+        <EtTimely>2</EtTimely>
+      </item>
+    </ExplicitTimeliness>
+    <SoftwareVendor>4</SoftwareVendor>
+    <SoftwareProduct>402</SoftwareProduct>
+    <SoftwareVersion>5</SoftwareVersion>
+  </ItdxRecord>
+</ItdxRecords>	

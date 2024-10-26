@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<ITRRecords>
+  <ITRRecord>
+    <LastModifiedDateTime>2020-06-22T15:45:30</LastModifiedDateTime>
+    <PatientId>6886</PatientId>
+    <FacilityId>130007</FacilityId>
+    <PatientLastName>FUDD</PatientLastName>
+    <PatientFirstName>ELMORE</PatientFirstName>
+    <PatientMiddleName>A</PatientMiddleName>
+	<SocialSecurityNumber>123456789</SocialSecurityNumber>
+	<HomeZip>83716</HomeZip>
+	<HomeCountry>US</HomeCountry>
+	<HomeState>16</HomeState>
+	<HomeCounty>001</HomeCounty>
+	<HomeCity>08700</HomeCity>
+	<HomeResidences>
+		<item>
+			<HomeResidence biu='1'/>
+		</item>
+	</HomeResidences>
+	<DateOfBirth>2007-05-01</DateOfBirth>
+    <Age>12</Age>
+    <AgeUnits>4</AgeUnits>
+    <Races>
+      <item>
+        <Race>6</Race>
+      </item>
+    </Races>
+    <Ethnicity>2</Ethnicity>
+    <Sex>1</Sex>
+    <IncidentDate>2020-01-01</IncidentDate>
+    <IncidentTime>200000</IncidentTime>
+    <WorkRelated>2</WorkRelated>
+    <PatientsOccupationalIndustry biu="1" />
+    <PatientsOccupation biu="1" />
+	<PatientsOccupationalIndustryOther biu="1" />
+    <PatientsOccupationOther biu="1" />
+    <PrimaryECodeIcd10>V00.111A</PrimaryECodeIcd10>
+    <AdditionalECodeIcd10s>
+      <item>
+        <AdditionalECodeIcd10 biu="1" />
+      </item>
+    </AdditionalECodeIcd10s>
+    <PlaceOfInjuryCode>Y92.331</PlaceOfInjuryCode>
+    <InjuryZip>83651</InjuryZip>
+    <IncidentCountry>US</IncidentCountry>
+    <IncidentState biu="1" />
+    <IncidentCounty biu="1" />
+    <IncidentCity biu="1" />
+    <ProtectiveDevices>
+      <item>
+        <ProtectiveDevice>1</ProtectiveDevice>
+      </item>
+    </ProtectiveDevices>
+    <ChildSpecificRestraint biu="1" />
+    <AirbagDeployments>
+      <item>
+        <AirbagDeployment biu="1" />
+      </item>
+    </AirbagDeployments>
+    <TraumaType>1</TraumaType>
+    <InjuryDescriptionText>injury description text </InjuryDescriptionText>
+    <EMSAgencyID>8327</EMSAgencyID>
+    <EMSAgencyName>Treasure Valley Paramedics</EMSAgencyName>
+    <TransportMode>1</TransportMode>
+    <OtherTransportModes>
+      <item>
+        <OtherTransportMode biu="1" />
+      </item>
+    </OtherTransportModes>
+    <InterFacilityTransfer>1</InterFacilityTransfer>
+    <PrehospitalCardiacArrest>2</PrehospitalCardiacArrest>
+	<PatientUUID>434Badc1-1cdc-3c75-be49-AB9de5d46deE</PatientUUID>
+    <HospitalArrivalDate>2020-01-02</HospitalArrivalDate>
+    <HospitalArrivalTime>002000</HospitalArrivalTime>
+    <Sbp>128</Sbp>
+    <Dbp>81</Dbp>
+    <PulseRate>85</PulseRate>
+    <Temperature>36.8</Temperature>
+    <TemperatureFahrenheit biu="2" />
+    <RespiratoryRate>20</RespiratoryRate>
+    <RespiratoryAssistance>1</RespiratoryAssistance>
+    <PulseOximetry>98</PulseOximetry>
+    <SupplementalOxygen>1</SupplementalOxygen>
+    <GcsEye>4</GcsEye>
+    <GcsVerbal>5</GcsVerbal>
+    <GcsMotor>6</GcsMotor>
+    <Gcs40Eye biu="1" />
+    <Gcs40Verbal biu="1" />
+    <Gcs40Motor biu="1" />
+    <TotalGcs>15</TotalGcs>
+    <GcsQualifiers>
+      <item>
+        <GcsQualifier>4</GcsQualifier>
+      </item>
+    </GcsQualifiers>
+    <Weight>59.60</Weight>
+    <Height>152.40</Height>
+    <DrugScreens>
+      <item>
+        <DrugScreen>15</DrugScreen>
+      </item>
+    </DrugScreens>
+    <AlcoholScreen biu="1" />
+	<AlcoholScreenResult biu="1" />
+    <EdDischargeDisposition>8</EdDischargeDisposition>
+    <RevisedTraumaScore>7.84</RevisedTraumaScore>
+    <MSEDate>2020-01-02</MSEDate>
+    <MSETime>002010</MSETime>
+	<TraumaTeamInvolvement>1</TraumaTeamInvolvement>
+    <EdDischargeOrdersWrittenDate>2020-01-02</EdDischargeOrdersWrittenDate>
+    <EdDischargeOrdersWrittenTime>014600</EdDischargeOrdersWrittenTime>
+    <EdDischargePhysicalDate>2020-01-02</EdDischargePhysicalDate>
+    <EdDischargePhysicalTime>021300</EdDischargePhysicalTime>
+    <DirectAdmission>2</DirectAdmission>
+    <Readmission>2</Readmission>
+	<HighestActivation>1</HighestActivation>
+    <TraumaSurgeonArrivalDate>2020-01-02</TraumaSurgeonArrivalDate>
+    <TraumaSurgeonArrivalTime>002010</TraumaSurgeonArrivalTime>
+    <HospitalProcedures>
+      <item>
+        <HospitalProcedureIcd10>BW28ZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2020-01-02</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>011200</HospitalProcedureStartTime>
+      </item>
+      <item>
+        <HospitalProcedureIcd10>B030ZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2020-01-02</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>213300</HospitalProcedureStartTime>
+      </item>
+    </HospitalProcedures>
+	<ComorbidConditions>
+		<item>
+			<ComorbidCondition>29</ComorbidCondition>
+		</item>
+		<item>
+			<ComorbidCondition>19</ComorbidCondition>
+		</item>
+		<item>
+			<ComorbidCondition>2</ComorbidCondition>
+		</item>
+	</ComorbidConditions>
+    <DiagnosisMemo>diagnosis memo field text</DiagnosisMemo>
+    <DiagnosesIcd10>
+      <item>
+        <DiagnosisIcd10>S02.119A</DiagnosisIcd10>
+      </item>
+      <item>
+        <DiagnosisIcd10>S06.4X0A</DiagnosisIcd10>
+      </item>
+      <item>
+        <DiagnosisIcd10>S00.03XA</DiagnosisIcd10>
+      </item>
+    </DiagnosesIcd10>
+    <AisCodes>
+      <item>
+        <AisPredot>150402</AisPredot>
+        <AisSeverity>2</AisSeverity>
+        <IssRegion>1</IssRegion>
+      </item>
+      <item>
+        <AisPredot>140632</AisPredot>
+        <AisSeverity>4</AisSeverity>
+        <IssRegion>1</IssRegion>
+      </item>
+      <item>
+        <AisPredot>110402</AisPredot>
+        <AisSeverity>1</AisSeverity>
+        <IssRegion>6</IssRegion>
+      </item>
+    </AisCodes>
+	<AisVersion>6</AisVersion>
+    <IssLocal>17</IssLocal>
+    <TRISS>0.989</TRISS>
+    <TotalIcuLos>2</TotalIcuLos>
+    <TotalVentDays>1</TotalVentDays>
+    <HospitalDischargeOrdersWrittenDate>2020-01-03</HospitalDischargeOrdersWrittenDate>
+    <HospitalDischargeOrdersWrittenTime>075900</HospitalDischargeOrdersWrittenTime>
+    <HospitalPhysicalDischargeDate>2020-01-03</HospitalPhysicalDischargeDate>
+    <HospitalPhysicalDischargeTime>093100</HospitalPhysicalDischargeTime>
+    <HospitalComplications>
+      <item>
+        <HospitalComplication>1</HospitalComplication>
+      </item>
+    </HospitalComplications>
+    <HospitalDischargeDisposition>6</HospitalDischargeDisposition>
+    <PrimaryMethodPayment>1</PrimaryMethodPayment>
+    <HospitalCreatedDate>2020-01-20</HospitalCreatedDate>
+    <HospitalCreatedTime>13:06:44</HospitalCreatedTime>
+    <MedicalRecordNumber>abc1234</MedicalRecordNumber>
+    <HospitalTransferredFrom>130013</HospitalTransferredFrom>
+    <HospitalTransferredFromName>Saint Alphonsus Medical Center - Nampa</HospitalTransferredFromName>
+    <HospitalTransferredTo biu="1" />
+	<Registrar>ABC</Registrar>
+	<NationalProviderIdentifier>1992736649</NationalProviderIdentifier>	
+
+<!-- ******** New 2023 Items ************************** -->
+	<PrimaryTraumaServiceType>1</PrimaryTraumaServiceType>
+	<TraumaTeamLevel>1</TraumaTeamLevel>
+	<VentilatorDate>2020-01-02</VentilatorDate>
+	<VentilatorTime>021300</VentilatorTime>
+	<PackedRedBloodCells>300</PackedRedBloodCells>
+	
+  </ITRRecord>
+  <ITRRecord>
+    <LastModifiedDateTime>2020-06-22T15:45:30</LastModifiedDateTime>
+    <PatientId>6886</PatientId>
+    <FacilityId>131313</FacilityId>
+    <PatientLastName>FUDD</PatientLastName>
+    <PatientFirstName>ELMORE</PatientFirstName>
+    <PatientMiddleName>A</PatientMiddleName>
+	<SocialSecurityNumber>123456789</SocialSecurityNumber>
+
+<!-- 
+	*************** Home Residence *******************
+	This shows a patient that does not have a US address 
+	it also allow multiples up to 3 (starting 2020)
+-->
+		<HomeZip biu='1'/>
+		<HomeCountry biu='1'/>
+		<HomeState biu='1'/>
+		<HomeCounty biu='1'/>
+		<HomeCity biu='1'/>
+		<HomeResidences>
+			<item>
+				<HomeResidence>3</HomeResidence>
+			</item>
+		</HomeResidences>
+
+	<DateOfBirth>2017-05-01</DateOfBirth>
+    <Age>22</Age>
+    <AgeUnits>4</AgeUnits>
+	<Races>
+		<item>
+			<Race>6</Race>
+		</item>
+	</Races>
+    <Ethnicity>2</Ethnicity>
+    <Sex>3</Sex>
+    <IncidentDate>2020-01-01</IncidentDate>
+    <IncidentTime>010300</IncidentTime>
+
+<!-- **************** Work Related ******************
+	This shows a work-related injury with supplemental data items
+-->
+		<WorkRelated>1</WorkRelated>
+		<PatientsOccupationalIndustry>7</PatientsOccupationalIndustry>
+		<PatientsOccupation>5</PatientsOccupation>
+		<PatientsOccupationalIndustryOther biu="1" />
+		<PatientsOccupationOther biu="1" />
+
+	<PrimaryECodeIcd10>V00.111A</PrimaryECodeIcd10>
+    <AdditionalECodeIcd10s>
+      <item>
+        <AdditionalECodeIcd10>V58.5XXA</AdditionalECodeIcd10>
+      </item>
+    </AdditionalECodeIcd10s>
+    <PlaceOfInjuryCode>Y92.331</PlaceOfInjuryCode>
+    <InjuryZip>83651</InjuryZip>
+    <IncidentCountry>US</IncidentCountry>
+    <IncidentState biu="1" />
+    <IncidentCounty biu="1" />
+    <IncidentCity biu="1" />
+	<ProtectiveDevices>
+		<item>
+			<ProtectiveDevice>7</ProtectiveDevice>
+		</item>
+	</ProtectiveDevices>
+	<ChildSpecificRestraint>1</ChildSpecificRestraint>
+	<AirbagDeployments>
+		<item>
+			<AirbagDeployment>2</AirbagDeployment>
+		</item>
+	</AirbagDeployments>
+    <TraumaType>1</TraumaType>
+	<InjuryDescriptionText biu="2" />
+    <EMSAgencyID>8327</EMSAgencyID>
+    <EMSAgencyName>Treasure Valley Paramedics</EMSAgencyName>
+    <TransportMode>2</TransportMode>
+    <OtherTransportModes>
+      <item>
+        <OtherTransportMode>1</OtherTransportMode>
+      </item>
+    </OtherTransportModes>
+
+<!-- ******** EMS Retired Items **************************
+	starting with 2021 the EMS fields are removed and replaced with PatientUUID
+	we have left these data items in the Idaho schema 
+	expecting a delay in the deployment of UUID out to EMS
+	Idaho will continue to accept these retired items or the new PatientUUID
+-->
+		<EmsNotifyDate>2020-01-01</EmsNotifyDate>
+		<EmsNotifyTime>233500</EmsNotifyTime>
+		<EmsArrivalDate>2020-01-01</EmsArrivalDate>
+		<EmsArrivalTime>234700</EmsArrivalTime>
+		<EmsLeftDate>2020-01-01</EmsLeftDate>
+		<EmsLeftTime>235600</EmsLeftTime>
+        <EmsSbp>164</EmsSbp>
+        <EmsPulseRate>96</EmsPulseRate>
+        <EmsRespiratoryRate>16</EmsRespiratoryRate>
+        <EmsPulseOximetry>95</EmsPulseOximetry>
+        <EmsGcsEye>2</EmsGcsEye>
+        <EmsGcsVerbal>4</EmsGcsVerbal>
+        <EmsGcsMotor>6</EmsGcsMotor>
+        <EmsTotalGcs>12</EmsTotalGcs>
+
+    <InterFacilityTransfer>1</InterFacilityTransfer>
+    <PrehospitalCardiacArrest>2</PrehospitalCardiacArrest>
+    <HospitalArrivalDate>2020-01-02</HospitalArrivalDate>
+    <HospitalArrivalTime>002000</HospitalArrivalTime>
+    <Sbp>128</Sbp>
+    <Dbp>81</Dbp>
+    <PulseRate>85</PulseRate>
+    <Temperature biu="2" />
+    <TemperatureFahrenheit>98.2</TemperatureFahrenheit>
+    <RespiratoryRate>20</RespiratoryRate>
+    <RespiratoryAssistance>1</RespiratoryAssistance>
+    <PulseOximetry>98</PulseOximetry>
+    <SupplementalOxygen>1</SupplementalOxygen>
+    <GcsEye biu="1" />
+    <GcsVerbal biu="1" />
+    <GcsMotor biu="1" />
+    <Gcs40Eye>4</Gcs40Eye>
+    <Gcs40Verbal>5</Gcs40Verbal>
+    <Gcs40Motor>6</Gcs40Motor>
+    <TotalGcs>15</TotalGcs>
+    <GcsQualifiers>
+      <item>
+        <GcsQualifier>4</GcsQualifier>
+      </item>
+    </GcsQualifiers>
+	<Weight>83.60</Weight>
+	<Height>175.00</Height>
+	<DrugScreens>
+		<item>
+			<DrugScreen>1</DrugScreen>
+		</item>
+		<item>
+			<DrugScreen>8</DrugScreen>
+		</item>
+	</DrugScreens>
+    <AlcoholScreen>1</AlcoholScreen>
+	<AlcoholScreenResult>0.370</AlcoholScreenResult>
+	<EdDischargeDisposition>7</EdDischargeDisposition>
+    <RevisedTraumaScore>7.84</RevisedTraumaScore>
+    <MSEDate biu="2" />
+    <MSETime biu="2" />
+	<TraumaTeamInvolvement>1</TraumaTeamInvolvement>
+    <EdDischargeOrdersWrittenDate>2020-01-02</EdDischargeOrdersWrittenDate>
+    <EdDischargeOrdersWrittenTime>014600</EdDischargeOrdersWrittenTime>
+    <EdDischargePhysicalDate>2020-01-02</EdDischargePhysicalDate>
+    <EdDischargePhysicalTime>021300</EdDischargePhysicalTime>
+    <DirectAdmission>2</DirectAdmission>
+    <Readmission>2</Readmission>
+	<HighestActivation>1</HighestActivation>
+    <TraumaSurgeonArrivalDate>2020-01-02</TraumaSurgeonArrivalDate>
+    <TraumaSurgeonArrivalTime>002010</TraumaSurgeonArrivalTime>
+    <HospitalProcedures>
+      <item>
+        <HospitalProcedureIcd10>BW28ZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2020-01-02</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>011200</HospitalProcedureStartTime>
+      </item>
+      <item>
+        <HospitalProcedureIcd10>B030ZZZ</HospitalProcedureIcd10>
+        <HospitalProcedureStartDate>2020-01-02</HospitalProcedureStartDate>
+        <HospitalProcedureStartTime>213300</HospitalProcedureStartTime>
+      </item>
+    </HospitalProcedures>
+    <ComorbidConditions>
+      <item>
+        <ComorbidCondition biu="1" />
+      </item>
+    </ComorbidConditions>
+    <DiagnosisMemo biu="2" />
+    <DiagnosesIcd10>
+      <item>
+        <DiagnosisIcd10>S02.119A</DiagnosisIcd10>
+      </item>
+      <item>
+        <DiagnosisIcd10>S06.4X0A</DiagnosisIcd10>
+      </item>
+      <item>
+        <DiagnosisIcd10>S00.03XA</DiagnosisIcd10>
+      </item>
+    </DiagnosesIcd10>
+    <AisCodes>
+      <item>
+        <AisPredot>150402</AisPredot>
+        <AisSeverity>2</AisSeverity>
+        <IssRegion>1</IssRegion>
+      </item>
+      <item>
+        <AisPredot>140632</AisPredot>
+        <AisSeverity>4</AisSeverity>
+        <IssRegion>1</IssRegion>
+      </item>
+      <item>
+        <AisPredot>110402</AisPredot>
+        <AisSeverity>1</AisSeverity>
+        <IssRegion>6</IssRegion>
+      </item>
+    </AisCodes>
+	<AisVersion>6</AisVersion>
+    <IssLocal>17</IssLocal>
+    <TRISS>0.989</TRISS>
+    <TotalIcuLos>2</TotalIcuLos>
+    <TotalVentDays biu="1" />
+    <HospitalDischargeOrdersWrittenDate>2020-01-03</HospitalDischargeOrdersWrittenDate>
+    <HospitalDischargeOrdersWrittenTime>075900</HospitalDischargeOrdersWrittenTime>
+    <HospitalPhysicalDischargeDate>2020-01-03</HospitalPhysicalDischargeDate>
+    <HospitalPhysicalDischargeTime>093100</HospitalPhysicalDischargeTime>
+    <HospitalComplications>
+      <item>
+        <HospitalComplication biu="1" />
+      </item>
+    </HospitalComplications>
+    <HospitalDischargeDisposition>6</HospitalDischargeDisposition>
+    <PrimaryMethodPayment>1</PrimaryMethodPayment>
+    <HospitalCreatedDate>2020-01-20</HospitalCreatedDate>
+    <HospitalCreatedTime>13:06:44</HospitalCreatedTime>
+    <MedicalRecordNumber>abc1234</MedicalRecordNumber>
+    <HospitalTransferredFrom biu="1" />
+    <HospitalTransferredFromName biu="1" />
+    <HospitalTransferredTo biu="1" />
+	<Registrar>ABC</Registrar>
+	<NationalProviderIdentifier>1962664029</NationalProviderIdentifier>	
+
+<!-- ******** New 2023 Items ************************** -->
+	<PrimaryTraumaServiceType>1</PrimaryTraumaServiceType>
+	<TraumaTeamLevel>1</TraumaTeamLevel>
+	<VentilatorDate>2020-01-02</VentilatorDate>
+	<VentilatorTime>021300</VentilatorTime>
+	<PackedRedBloodCells>300</PackedRedBloodCells>
+	
+  </ITRRecord>
+</ITRRecords>

@@ -5,8 +5,10 @@ class Address {
     String city
     String county
     String zipCode
-    // other address attributes
 
+    // other address attributes
+    Boolean primary
+    String  Other
 
 /*
     Description CITY
@@ -19,7 +21,6 @@ class Address {
         • Used to calculate the FIPS code.
         • The null value “Not Applicable” is reported if Patient’s Home ZIP/Postal Code is reported.
         • The null value “Not Applicable” is reported for non-US hospitals.
-
 
     patient’s COUNTY (or parish) of residence.
     Element Values
@@ -64,6 +65,8 @@ class Address {
     Country, Patient’s Home State (US only), Patient’s Home County (US only), and Patient’s
     Home City (US only).
     • If Patient’s Home ZIP/Postal Code is reported, must also report Patient’s Home Country.
-
+        0001 1 Invalid value
+        0002 2 Element cannot be blank
+        0040 1 Single Entry Max exceeded
  */
 }
