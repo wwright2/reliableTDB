@@ -1,15 +1,15 @@
 package com.padron
 
 class Race {
-
     static constraints = {
+        val unique: true
+        label unique: true
     }
-    static belongsTo = [person: Person]
+    static hasMany = [ persons : Person]
 
-    Integer race
-
-    enum Race {1. Asian, 2. NativeHawaiianOtherPacificIslander,   3. OtherRace,   4. AmericanIndian,   5. BlackAfricanAmerican,
-        6. White}
+    Integer     val
+    String      label
+}
 
     /*
     The patient’s race.
@@ -42,4 +42,3 @@ class Race {
         with any other value
         0950 1 Multiple Entry Max exceeded
      */
-}

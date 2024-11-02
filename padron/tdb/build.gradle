@@ -15,6 +15,9 @@ group = "tdb"
 repositories {
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core/" }
+        flatDir {
+            dirs 'lib' // Replace 'libs' with the path to your library directory
+        }
 }
 
 configurations {
@@ -64,7 +67,8 @@ dependencies {
     testRuntimeOnly("org.seleniumhq.selenium:selenium-firefox-driver:4.19.1")
     testRuntimeOnly("org.seleniumhq.selenium:selenium-safari-driver:4.19.1")
     testImplementation("io.micronaut:micronaut-http-client")
-
+    runtimeOnly("mysql:mysql-connector-java:8.0.32")
+    implementation(name: 'mysql-connector-j-8.0.32', ext: 'jar')
 }
 
 application {
@@ -72,7 +76,7 @@ application {
 }
 
 java {
-    sourceCompatibility = JavaVersion.toVersion("17")
+    sourceCompatibility = JavaVersion.toVersion("11")
 }
 
 tasks.withType(Test) {

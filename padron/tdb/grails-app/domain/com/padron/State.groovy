@@ -1,8 +1,7 @@
 package com.padron
 
 class State {
-    static belongsTo = [country: Country]
-    static hasMany = [addresses: Address, counties: County]
+
     String name
     String code
     String fips // Relevant value for data element (two-digit numeric FIPS code)

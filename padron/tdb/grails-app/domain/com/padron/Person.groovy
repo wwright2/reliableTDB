@@ -7,7 +7,7 @@ class Person {
     String lastname
     String middlename
 
-    HousingStatus status
+    Integer altResidence // AltHousingType = 1. Homeless 2. Undocumented Citizen 3. Migrant Worker
     Date    dateOfBirth
     Date    patientAgeAtInjuryDate
     Integer ageUnits   // 1. Hours    2. Days    3. Months    4. Years    5. Minutes    6. Weeks

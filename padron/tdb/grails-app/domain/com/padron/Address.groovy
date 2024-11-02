@@ -1,14 +1,20 @@
 package com.padron
 
 class Address {
-    static belongsTo = [person: Person, country: Country, state: State]
-    String city
-    String county
+    static belongsTo = [person: Person]
+    String street
+
     String zipCode
+    /* No Zip, then must have city,state else AltHousing */
+    String city
+    String stateTerritory
+    String county
 
     // other address attributes
-    Boolean primary
-    String  Other
+    Boolean primeAddress
+    String  other
+
+
 
 /*
     Description CITY
