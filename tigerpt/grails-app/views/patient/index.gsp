@@ -12,26 +12,28 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Patient ID</th>
+                <th>ID</th>
                 <th>Medical Record</th>
                 <th>Name</th>
                 <th>DOB</th>
-                <th>SSN</th>
+                <th>Age</th>
+                <th>Sex</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <g:each in="${patientList}" var="patient">
                 <tr>
-                    <td>${patient.patientId}</td>
+                    <td>${patient.id}</td>
                     <td>${patient.medicalRecordNumber}</td>
                     <td>
                         <g:link action="show" id="${patient.id}">
-                            ${patient.patientLastName}, ${patient.patientFirstName} ${patient.patientMiddleName}
+                            ${patient.lastName}, ${patient.firstName} ${patient.middleName ?: ''}
                         </g:link>
                     </td>
                     <td><g:formatDate date="${patient.dateOfBirth}" format="yyyy-MM-dd"/></td>
-                    <td>${patient.socialSecurityNumber}</td>
+                    <td>${patient.age} ${patient.ageUnits ?: ''}</td>
+                    <td>${patient.sex}</td>
                     <td>
                         <g:link action="edit" id="${patient.id}" class="btn btn-sm">Edit</g:link>
                         <g:form action="delete" id="${patient.id}" style="display:inline">

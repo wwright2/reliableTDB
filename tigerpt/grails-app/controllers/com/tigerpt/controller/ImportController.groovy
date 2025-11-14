@@ -1,4 +1,9 @@
-package com.tigerpt
+package com.tigerpt.controller
+
+import com.tigerpt.domain.Patient
+import com.tigerpt.domain.Injury
+import com.tigerpt.domain.HospitalProcedure
+import com.tigerpt.domain.Diagnosis
 
 class ImportController {
 
@@ -6,21 +11,21 @@ class ImportController {
 
     def uploadXml() {
         def file = request.getFile('xmlFile')
-        
+
         if (file?.empty) {
             flash.error = "Please select an XML file to upload"
             redirect action: 'index'
             return
         }
-        
+
         try {
             def xml = new XmlSlurper().parseText(file.inputStream.text)
             def recordsImported = 0
-            
+
             xml.ITRRecord.each { record ->
                 // Create or update patient
                 def patient = Patient.findByPatientId(record.PatientId.text()) ?: new Patient()
-                
+
                 patient.patientId = record.PatientId.text()
                 patient.facilityId = record.FacilityId.text()
                 patient.patientLastName = record.PatientLastName.text()
@@ -39,9 +44,9 @@ class ImportController {
                 patient.ethnicity = record.Ethnicity.text()
                 patient.sex = record.Sex.text()
                 patient.medicalRecordNumber = record.MedicalRecordNumber.text()
-                
+
                 patient.save(flush: true)
-                
+
                 // Create injury record
                 def injury = new Injury()
                 injury.patient = patient
@@ -77,19 +82,19 @@ class ImportController {
                 injury.issLocal = record.IssLocal.text() as Integer
                 injury.totalIcuLos = record.TotalIcuLos.text() as Integer
                 injury.totalVentDays = record.TotalVentDays.text() as Integer
-                
+
                 injury.save(flush: true)
-                
+
                 // Import procedures
                 record.HospitalProcedures?.item?.each { procItem ->
-                    def procedure = new Procedure()
+                    def procedure = new HospitalProcedure()
                     procedure.injury = injury
                     procedure.hospitalProcedureIcd10 = procItem.HospitalProcedureIcd10.text()
                     procedure.procedureStartDate = Date.parse('yyyy-MM-dd', procItem.HospitalProcedureStartDate.text())
                     procedure.procedureStartTime = procItem.HospitalProcedureStartTime.text()
                     procedure.save(flush: true)
                 }
-                
+
                 // Import diagnoses
                 record.DiagnosesIcd10?.item?.each { diagItem ->
                     def diagnosis = new Diagnosis()
@@ -97,17 +102,17 @@ class ImportController {
                     diagnosis.diagnosisIcd10 = diagItem.DiagnosisIcd10.text()
                     diagnosis.save(flush: true)
                 }
-                
+
                 recordsImported++
             }
-            
+
             flash.message = "Successfully imported ${recordsImported} records"
-            
+
         } catch (Exception e) {
             flash.error = "Error importing XML: ${e.message}"
             log.error("XML Import Error", e)
         }
-        
+
         redirect action: 'index'
     }
 }

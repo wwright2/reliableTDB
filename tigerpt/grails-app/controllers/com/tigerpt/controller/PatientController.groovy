@@ -1,5 +1,7 @@
-package com.tigerpt
+package com.tigerpt.controller
 
+import com.tigerpt.domain.Patient
+import com.tigerpt.service.PatientService
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>TigerPT - Idaho Trauma Registry</title>
+    <title>TigerPT - Trauma Registry</title>
     <style>
         .dashboard-container {
             max-width: 1200px;
@@ -76,7 +76,7 @@
 <body>
     <div class="dashboard-container">
         <div class="dashboard-header">
-            <h1>🏥 TigerPT - Idaho Trauma Registry</h1>
+            <h1>🏥 TigerPT -  Trauma Registry</h1>
             <p>Comprehensive Trauma Patient Tracking System</p>
         </div>
         
@@ -158,13 +158,23 @@
             
             <div class="dashboard-card">
                 <h3>📁 Import Data</h3>
-                <p>Upload Idaho trauma registry XML files</p>
+                <p>Upload
+
+
+
+
+ trauma registry XML files</p>
                 <g:link controller="import" action="index" class="btn">Import XML</g:link>
             </div>
         </div>
         
         <div style="text-align: center; margin-top: 40px; padding: 20px; background: #ecf0f1; border-radius: 8px;">
-            <p style="color: #7f8c8d;"><strong>TigerPT v1.0</strong> | NTDS 2023 Compliant | Idaho Trauma Registry System</p>
+            <p style="color: #7f8c8d;"><strong>TigerPT v1.0</strong> | NTDS 2023 Compliant |
+
+
+
+
+ Trauma Registry System</p>
         </div>
     </div>
 </body>
