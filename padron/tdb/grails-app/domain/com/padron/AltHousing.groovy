@@ -1,9 +1,16 @@
 package com.padron
 
-class AltHousing {
+enum AltHousing {
 
-    static constraints = {
+    Homeless(1), UndocumentedCitizen(2), MigrantWorker(3)
+
+    final int value
+
+    AltHousing(int value) {
+        this.value = value
     }
-    String  label
-    Integer housing
+
+    static AltHousing getDefault() {
+        return Homeless
+    }
 }
